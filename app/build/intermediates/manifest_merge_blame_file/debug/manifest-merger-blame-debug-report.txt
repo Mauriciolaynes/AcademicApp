@@ -1,0 +1,235 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.academicapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:4:5-66
+11-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:5:5-78
+12-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:5:22-76
+13
+14    <permission
+14-->[androidx.core:core:1.12.0] C:\Users\mauri\.gradle\caches\transforms-3\88e34bdf4456fda3f546daabbcf3b977\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+15        android:name="com.academicapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.12.0] C:\Users\mauri\.gradle\caches\transforms-3\88e34bdf4456fda3f546daabbcf3b977\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.12.0] C:\Users\mauri\.gradle\caches\transforms-3\88e34bdf4456fda3f546daabbcf3b977\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.academicapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.12.0] C:\Users\mauri\.gradle\caches\transforms-3\88e34bdf4456fda3f546daabbcf3b977\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.12.0] C:\Users\mauri\.gradle\caches\transforms-3\88e34bdf4456fda3f546daabbcf3b977\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:7:5-42:19
+21        android.roundIcon="@mipmap/ic_launcher_round"
+21-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:11:9-54
+22        android:allowBackup="true"
+22-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:8:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.12.0] C:\Users\mauri\.gradle\caches\transforms-3\88e34bdf4456fda3f546daabbcf3b977\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+24        android:debuggable="true"
+25        android:extractNativeLibs="true"
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:9:9-43
+27        android:label="@string/app_name"
+27-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:10:9-41
+28        android:supportsRtl="true"
+28-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:12:9-35
+29        android:testOnly="true"
+30        android:theme="@style/Theme.AcademicApp"
+30-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:13:9-49
+31        android:usesCleartextTraffic="true" >
+31-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:14:9-44
+32
+33        <!-- LOGIN (Launcher) -->
+34        <activity
+34-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:17:9-24:20
+35            android:name="com.academicapp.ui.login.LoginActivity"
+35-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:18:13-51
+36            android:exported="true" >
+36-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:19:13-36
+37            <intent-filter>
+37-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:20:13-23:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:21:17-68
+38-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:21:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:22:17-76
+40-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:22:27-74
+41            </intent-filter>
+42        </activity>
+43
+44        <!-- PROFESOR -->
+45        <activity
+45-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:27:9-94
+46            android:name="com.academicapp.ui.profesor.ProfesorHomeActivity"
+46-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:27:19-67
+47            android:exported="false" />
+47-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:27:68-92
+48        <activity
+48-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:28:9-109
+49            android:name="com.academicapp.ui.profesor.asistencia.MarcarAsistenciaActivity"
+49-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:28:19-82
+50            android:exported="false" />
+50-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:28:83-107
+51        <activity
+51-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:9-101
+52            android:name="com.academicapp.ui.profesor.notas.IngresarNotasActivity"
+52-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:19-74
+53            android:exported="false" />
+53-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:75-99
+54        <activity
+54-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:9-102
+55            android:name="com.academicapp.ui.profesor.notas.ModificarNotasActivity"
+55-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:19-75
+56            android:exported="false" />
+56-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:76-100
+57        <activity
+57-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:9-104
+58            android:name="com.academicapp.ui.profesor.notas.VerNotasProfesorActivity"
+58-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:19-77
+59            android:exported="false" />
+59-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:78-102
+60        <activity
+60-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:9-116
+61            android:name="com.academicapp.ui.profesor.justificacion.GestionJustificacionActivity"
+61-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:19-89
+62            android:exported="false" />
+62-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:90-114
+63
+64        <!-- ALUMNO -->
+65        <activity
+65-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:35:9-90
+66            android:name="com.academicapp.ui.alumno.AlumnoHomeActivity"
+66-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:35:19-63
+67            android:exported="false" />
+67-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:35:64-88
+68        <activity
+68-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:36:9-96
+69            android:name="com.academicapp.ui.alumno.cursos.MisCursosActivity"
+69-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:36:19-69
+70            android:exported="false" />
+70-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:36:70-94
+71        <activity
+71-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:37:9-100
+72            android:name="com.academicapp.ui.alumno.notas.VerNotasAlumnoActivity"
+72-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:37:19-73
+73            android:exported="false" />
+73-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:37:74-98
+74        <activity
+74-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:38:9-103
+75            android:name="com.academicapp.ui.alumno.notas.SolicitudRevisionActivity"
+75-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:38:19-76
+76            android:exported="false" />
+76-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:38:77-101
+77        <activity
+77-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:39:9-104
+78            android:name="com.academicapp.ui.alumno.asistencia.VerAsistenciaActivity"
+78-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:39:19-77
+79            android:exported="false" />
+79-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:39:78-102
+80        <activity
+80-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:40:9-113
+81            android:name="com.academicapp.ui.alumno.asistencia.SolicitudJustificacionActivity"
+81-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:40:19-86
+82            android:exported="false" />
+82-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:40:87-111
+83
+84        <provider
+84-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+85            android:name="androidx.startup.InitializationProvider"
+85-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+86            android:authorities="com.academicapp.androidx-startup"
+86-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+87            android:exported="false" >
+87-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+88            <meta-data
+88-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+89                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+89-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+90                android:value="androidx.startup" />
+90-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+91            <meta-data
+91-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\mauri\.gradle\caches\transforms-3\8ffebc0ac4f110a5fc1eed49e271a470\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+92                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+92-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\mauri\.gradle\caches\transforms-3\8ffebc0ac4f110a5fc1eed49e271a470\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+93                android:value="androidx.startup" />
+93-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\mauri\.gradle\caches\transforms-3\8ffebc0ac4f110a5fc1eed49e271a470\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+94            <meta-data
+94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+95                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+96                android:value="androidx.startup" />
+96-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+97        </provider>
+98
+99        <uses-library
+99-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+100            android:name="androidx.window.extensions"
+100-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+101            android:required="false" />
+101-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+102        <uses-library
+102-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+103            android:name="androidx.window.sidecar"
+103-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+104            android:required="false" />
+104-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+105
+106        <service
+106-->[androidx.room:room-runtime:2.6.1] C:\Users\mauri\.gradle\caches\transforms-3\425deab3d17e660147e54045034e53b5\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+107            android:name="androidx.room.MultiInstanceInvalidationService"
+107-->[androidx.room:room-runtime:2.6.1] C:\Users\mauri\.gradle\caches\transforms-3\425deab3d17e660147e54045034e53b5\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+108            android:directBootAware="true"
+108-->[androidx.room:room-runtime:2.6.1] C:\Users\mauri\.gradle\caches\transforms-3\425deab3d17e660147e54045034e53b5\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+109            android:exported="false" />
+109-->[androidx.room:room-runtime:2.6.1] C:\Users\mauri\.gradle\caches\transforms-3\425deab3d17e660147e54045034e53b5\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+110
+111        <receiver
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+112            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+113            android:directBootAware="false"
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+114            android:enabled="true"
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+115            android:exported="true"
+115-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+116            android:permission="android.permission.DUMP" >
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+117            <intent-filter>
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+118                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+119            </intent-filter>
+120            <intent-filter>
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+121                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+122            </intent-filter>
+123            <intent-filter>
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+124                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+125            </intent-filter>
+126            <intent-filter>
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+127                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+128            </intent-filter>
+129        </receiver>
+130    </application>
+131
+132</manifest>

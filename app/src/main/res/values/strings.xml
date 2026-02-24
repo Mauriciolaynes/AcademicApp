@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AcadémicApp</string>
+    <string name="app_tagline">Sistema de Gestión Académica</string>
+
+    <!-- Login -->
+    <string name="login_welcome">Bienvenido 👋</string>
+    <string name="login_subtitle">Ingresa con tus credenciales</string>
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_login">Iniciar Sesión</string>
+    <string name="tab_profesor">Profesor</string>
+    <string name="tab_alumno">Alumno</string>
+    <string name="error_campos_vacios">Por favor completa todos los campos</string>
+    <string name="error_credenciales">Usuario o contraseña incorrectos</string>
+
+    <!-- Profesor Home -->
+    <string name="buenos_dias">Buenos días,</string>
+    <string name="mis_cursos">Mis Cursos</string>
+    <string name="acciones_rapidas">Acciones Rápidas</string>
+    <string name="marcar_asistencia">Marcar Asistencia</string>
+    <string name="ingresar_notas">Ingresar Notas</string>
+    <string name="modificar_notas">Modificar Notas</string>
+    <string name="ver_notas">Ver Notas</string>
+    <string name="solicitudes_pendientes">Solicitudes Pendientes</string>
+    <string name="justificaciones_pendientes">Justificaciones de inasistencia</string>
+
+    <!-- Asistencia -->
+    <string name="seleccionar_curso">Seleccionar Curso</string>
+    <string name="lista_alumnos">Lista de Alumnos</string>
+    <string name="presente">Presente</string>
+    <string name="ausente">Ausente</string>
+    <string name="tardanza">Tardanza</string>
+    <string name="justificado">Justificado</string>
+    <string name="guardar_asistencia">Guardar Asistencia</string>
+    <string name="asistencia_guardada">Asistencia registrada correctamente</string>
+
+    <!-- Notas -->
+    <string name="tipo_evaluacion">Tipo de Evaluación</string>
+    <string name="nota_ingresada">Nota registrada correctamente</string>
+    <string name="nota_modificada">Nota modificada correctamente</string>
+    <string name="error_rango_nota">La nota debe estar entre 0 y 20</string>
+
+    <!-- Alumno Home -->
+    <string name="mi_promedio">Promedio</string>
+    <string name="mi_asistencia">Asistencia</string>
+    <string name="mis_cursos_alumno">Mis Cursos</string>
+    <string name="mis_notas">Mis Notas</string>
+    <string name="solicitar_justificacion">Solicitar Justificación</string>
+    <string name="solicitar_revision">Solicitar Revisión de Nota</string>
+    <string name="motivo">Motivo</string>
+    <string name="enviar_solicitud">Enviar Solicitud</string>
+    <string name="solicitud_enviada">Solicitud enviada correctamente</string>
+
+    <!-- Justificación -->
+    <string name="aprobar">Aprobar</string>
+    <string name="rechazar">Rechazar</string>
+    <string name="pendiente">Pendiente</string>
+    <string name="aprobada">Aprobada</string>
+    <string name="rechazada">Rechazada</string>
+
+    <!-- Navegación -->
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_asistencia">Asistencia</string>
+    <string name="nav_notas">Notas</string>
+    <string name="nav_perfil">Perfil</string>
+
+    <!-- General -->
+    <string name="ver_todos">Ver todos</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="guardar">Guardar</string>
+    <string name="error_generico">Ocurrió un error. Inténtalo nuevamente.</string>
+    <string name="sin_datos">No hay datos disponibles</string>
+    <string name="txtrol">Ingrese su Rol</string>
+</resources>
