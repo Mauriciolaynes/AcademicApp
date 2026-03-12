@@ -19,7 +19,7 @@
             android:id="@+id/tvCursoNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Matemáticas 📐"
+            android:text="Cargando..."
             android:textColor="@color/colorTextWhite"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -28,7 +28,7 @@
             android:id="@+id/tvDetalleClase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3°A • 28 alumnos"
+            android:text="3°A • -- alumnos"
             android:textColor="#BBFFFFFF"
             android:textSize="14sp" />
     </LinearLayout>
@@ -51,12 +51,22 @@
                 android:id="@+id/tvListaTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lista de Asistencia"
+                android:text="Lista de Alumnos"
                 android:textColor="@color/colorTextPrimary"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progressAsistencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvAlumnos"

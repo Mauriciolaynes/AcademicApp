@@ -3539,6 +3539,8 @@ id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
+id progressAsistencia
+id progressHome
 id progressLogin
 id progress_circular
 id progress_horizontal

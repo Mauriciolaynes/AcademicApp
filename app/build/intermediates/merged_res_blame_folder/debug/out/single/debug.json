@@ -32,12 +32,12 @@
         "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-56:\\layout_activity_profesor_home.xml.flat",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\activity_profesor_home.xml"
-    },
-    {
         "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-56:\\drawable_bg_icon_purple.xml.flat",
         "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\drawable\\bg_icon_purple.xml"
+    },
+    {
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-56:\\layout_activity_profesor_home.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\activity_profesor_home.xml"
     },
     {
         "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-56:\\mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -66,6 +66,10 @@
     {
         "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-56:\\layout_item_nota.xml.flat",
         "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\item_nota.xml"
+    },
+    {
+        "merged": "com.academicapp-merged_res-56:/layout_activity_profesor_home.xml.flat",
+        "source": "com.academicapp-main-58:/layout/activity_profesor_home.xml"
     },
     {
         "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-56:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -100,16 +104,16 @@
         "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\drawable\\ic_launcher_background.xml"
     },
     {
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-56:\\drawable_ic_arrow_forward.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\drawable\\ic_arrow_forward.xml"
+    },
+    {
         "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-56:\\layout_item_curso_profesor.xml.flat",
         "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\item_curso_profesor.xml"
     },
     {
         "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-56:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\mipmap-mdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "com.academicapp-merged_res-56:/drawable_ic_arrow_forward.xml.flat",
-        "source": "com.academicapp-main-58:/drawable/ic_arrow_forward.xml"
     },
     {
         "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-56:\\layout_activity_seleccionar_curso_nota.xml.flat",

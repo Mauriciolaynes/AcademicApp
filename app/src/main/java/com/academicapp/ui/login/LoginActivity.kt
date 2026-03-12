@@ -9,10 +9,8 @@ import androidx.lifecycle.lifecycleScope
 import com.academicapp.data.model.Rol
 import com.academicapp.databinding.ActivityLoginBinding
 import com.academicapp.network.RetrofitClient
-import com.academicapp.ui.alumno.AlumnoHomeActivity
 import com.academicapp.ui.profesor.ProfesorHomeActivity
 import com.academicapp.util.SessionManager
-import com.google.android.material.tabs.TabLayout
 import kotlinx.coroutines.launch
 import java.io.IOException
 
@@ -20,7 +18,7 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var sessionManager: SessionManager
-    private var rolSeleccionado: Rol = Rol.PROFESOR
+    private val rolSeleccionado: Rol = Rol.PROFESOR
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,21 +27,12 @@ class LoginActivity : AppCompatActivity() {
 
         sessionManager = SessionManager(this)
 
-        setupTabs()
+        setupUI()
         setupListeners()
     }
 
-    private fun setupTabs() {
-        binding.tabsRol.addTab(binding.tabsRol.newTab().setText("👨‍🏫 Profesor"))
-        binding.tabsRol.addTab(binding.tabsRol.newTab().setText("👨‍🎓 Alumno"))
-
-        binding.tabsRol.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                rolSeleccionado = if (tab?.position == 0) Rol.PROFESOR else Rol.ALUMNO
-            }
-            override fun onTabUnselected(tab: TabLayout.Tab?) {}
-            override fun onTabReselected(tab: TabLayout.Tab?) {}
-        })
+    private fun setupUI() {
+        binding.tabsRol.visibility = View.GONE
     }
 
     private fun setupListeners() {
@@ -74,15 +63,13 @@ class LoginActivity : AppCompatActivity() {
                 if (response.isSuccessful && response.body() != null) {
                     val usuario = response.body()!!
                     val receivedRolId = usuario.id_rol.trim()
-                    val userRole = if (receivedRolId == "1") Rol.PROFESOR else Rol.ALUMNO
-
-                    if (userRole == rolSeleccionado) {
-                        sessionManager.guardarSesion(usuario.id_usuario, usuario.nombre, userRole)
-                        navegarAlHome(userRole)
+                    
+                    if (receivedRolId == "1") {
+                        sessionManager.guardarSesion(usuario.id_usuario, usuario.nombre, Rol.PROFESOR)
+                        navegarAlHome()
                     } else {
-                        // Error mejorado para mostrar el problema
-                        mostrarError("Rol no coincide. App: ${rolSeleccionado.name}, API devolvió: '$receivedRolId'")
-                        Log.d("LoginActivity", "Rol de API: '$receivedRolId', Rol seleccionado: '${rolSeleccionado.name}'")
+                        mostrarError("Esta aplicación es exclusiva para profesores.")
+                        Log.d("LoginActivity", "Intento de login con rol: '$receivedRolId'")
                     }
 
                 } else {
@@ -100,12 +87,8 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun navegarAlHome(rol: Rol) {
-        val intent = if (rol == Rol.PROFESOR) {
-            Intent(this, ProfesorHomeActivity::class.java)
-        } else {
-            Intent(this, AlumnoHomeActivity::class.java)
-        }
+    private fun navegarAlHome() {
+        val intent = Intent(this, ProfesorHomeActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
         finish()

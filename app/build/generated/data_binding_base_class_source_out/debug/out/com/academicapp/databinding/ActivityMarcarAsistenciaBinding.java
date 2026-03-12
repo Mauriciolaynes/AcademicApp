@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +30,9 @@ public final class ActivityMarcarAsistenciaBinding implements ViewBinding {
   public final LinearLayout layoutHeader;
 
   @NonNull
+  public final ProgressBar progressAsistencia;
+
+  @NonNull
   public final RecyclerView rvAlumnos;
 
   @NonNull
@@ -42,11 +46,13 @@ public final class ActivityMarcarAsistenciaBinding implements ViewBinding {
 
   private ActivityMarcarAsistenciaBinding(@NonNull ConstraintLayout rootView,
       @NonNull MaterialButton btnGuardarAsistencia, @NonNull LinearLayout layoutHeader,
-      @NonNull RecyclerView rvAlumnos, @NonNull TextView tvCursoNombre,
-      @NonNull TextView tvDetalleClase, @NonNull TextView tvListaTitulo) {
+      @NonNull ProgressBar progressAsistencia, @NonNull RecyclerView rvAlumnos,
+      @NonNull TextView tvCursoNombre, @NonNull TextView tvDetalleClase,
+      @NonNull TextView tvListaTitulo) {
     this.rootView = rootView;
     this.btnGuardarAsistencia = btnGuardarAsistencia;
     this.layoutHeader = layoutHeader;
+    this.progressAsistencia = progressAsistencia;
     this.rvAlumnos = rvAlumnos;
     this.tvCursoNombre = tvCursoNombre;
     this.tvDetalleClase = tvDetalleClase;
@@ -92,6 +98,12 @@ public final class ActivityMarcarAsistenciaBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.progressAsistencia;
+      ProgressBar progressAsistencia = ViewBindings.findChildViewById(rootView, id);
+      if (progressAsistencia == null) {
+        break missingId;
+      }
+
       id = R.id.rvAlumnos;
       RecyclerView rvAlumnos = ViewBindings.findChildViewById(rootView, id);
       if (rvAlumnos == null) {
@@ -117,7 +129,8 @@ public final class ActivityMarcarAsistenciaBinding implements ViewBinding {
       }
 
       return new ActivityMarcarAsistenciaBinding((ConstraintLayout) rootView, btnGuardarAsistencia,
-          layoutHeader, rvAlumnos, tvCursoNombre, tvDetalleClase, tvListaTitulo);
+          layoutHeader, progressAsistencia, rvAlumnos, tvCursoNombre, tvDetalleClase,
+          tvListaTitulo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

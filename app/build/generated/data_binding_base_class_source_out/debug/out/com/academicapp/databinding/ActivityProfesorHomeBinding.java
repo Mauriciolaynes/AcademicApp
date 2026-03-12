@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -45,6 +46,9 @@ public final class ActivityProfesorHomeBinding implements ViewBinding {
   public final LinearLayout layoutHeader;
 
   @NonNull
+  public final ProgressBar progressHome;
+
+  @NonNull
   public final RecyclerView rvCursos;
 
   @NonNull
@@ -66,8 +70,9 @@ public final class ActivityProfesorHomeBinding implements ViewBinding {
       @NonNull BottomNavigationView bottomNav, @NonNull CardView btnIngresarNotas,
       @NonNull CardView btnMarcarAsistencia, @NonNull CardView btnModificarNotas,
       @NonNull CardView btnVerNotas, @NonNull CardView cardPendientes,
-      @NonNull LinearLayout layoutHeader, @NonNull RecyclerView rvCursos,
-      @NonNull TextView tvAvatar, @NonNull TextView tvCantidadPendientes, @NonNull TextView tvFecha,
+      @NonNull LinearLayout layoutHeader, @NonNull ProgressBar progressHome,
+      @NonNull RecyclerView rvCursos, @NonNull TextView tvAvatar,
+      @NonNull TextView tvCantidadPendientes, @NonNull TextView tvFecha,
       @NonNull TextView tvNombreProfesor, @NonNull TextView tvVerCursos) {
     this.rootView = rootView;
     this.bottomNav = bottomNav;
@@ -77,6 +82,7 @@ public final class ActivityProfesorHomeBinding implements ViewBinding {
     this.btnVerNotas = btnVerNotas;
     this.cardPendientes = cardPendientes;
     this.layoutHeader = layoutHeader;
+    this.progressHome = progressHome;
     this.rvCursos = rvCursos;
     this.tvAvatar = tvAvatar;
     this.tvCantidadPendientes = tvCantidadPendientes;
@@ -154,6 +160,12 @@ public final class ActivityProfesorHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.progressHome;
+      ProgressBar progressHome = ViewBindings.findChildViewById(rootView, id);
+      if (progressHome == null) {
+        break missingId;
+      }
+
       id = R.id.rvCursos;
       RecyclerView rvCursos = ViewBindings.findChildViewById(rootView, id);
       if (rvCursos == null) {
@@ -192,8 +204,8 @@ public final class ActivityProfesorHomeBinding implements ViewBinding {
 
       return new ActivityProfesorHomeBinding((CoordinatorLayout) rootView, bottomNav,
           btnIngresarNotas, btnMarcarAsistencia, btnModificarNotas, btnVerNotas, cardPendientes,
-          layoutHeader, rvCursos, tvAvatar, tvCantidadPendientes, tvFecha, tvNombreProfesor,
-          tvVerCursos);
+          layoutHeader, progressHome, rvCursos, tvAvatar, tvCantidadPendientes, tvFecha,
+          tvNombreProfesor, tvVerCursos);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -3,6 +3,7 @@ package com.academicapp.ui.profesor
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +18,8 @@ import com.academicapp.ui.profesor.notas.IngresarNotasActivity
 import com.academicapp.ui.profesor.notas.ModificarNotasActivity
 import com.academicapp.ui.profesor.notas.VerNotasProfesorActivity
 import com.academicapp.util.SessionManager
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -61,7 +64,8 @@ class ProfesorHomeActivity : AppCompatActivity() {
 
     private fun setupListeners() {
         binding.btnMarcarAsistencia.setOnClickListener {
-            startActivity(Intent(this, MarcarAsistenciaActivity::class.java))
+            // Podríamos abrir directamente el primer curso o mostrar el diálogo
+            showCourseSelectionDialog()
         }
         binding.btnIngresarNotas.setOnClickListener {
             startActivity(Intent(this, IngresarNotasActivity::class.java))
@@ -89,7 +93,7 @@ class ProfesorHomeActivity : AppCompatActivity() {
             .setTitle("Seleccione un curso")
             .setItems(courseNames) { _, which ->
                 val selectedCourse = cursos[which]
-                val intent = Intent(this, VerNotasProfesorActivity::class.java).apply {
+                val intent = Intent(this, MarcarAsistenciaActivity::class.java).apply {
                     putExtra("curso_id", selectedCourse.id)
                     putExtra("curso_nombre", selectedCourse.nombre)
                 }
@@ -100,41 +104,56 @@ class ProfesorHomeActivity : AppCompatActivity() {
 
     private fun cargarCursosDesdeApi() {
         val profesorId = sessionManager.getUserId()
-        if (profesorId == -1) {
-            Toast.makeText(this, "Error: ID de profesor no encontrado", Toast.LENGTH_LONG).show()
-            return
-        }
+        if (profesorId == -1) return
+
+        binding.progressHome.visibility = View.VISIBLE
 
         lifecycleScope.launch {
             try {
                 val response = RetrofitClient.instance.getCursosPorProfesor(profesorId)
                 if (response.isSuccessful && response.body() != null) {
                     val cursosDesdeApi = response.body()!!
-                    // Mapeamos el modelo de red al modelo de la UI
-                    val cursosParaUi = cursosDesdeApi.map {
-                        Curso(
-                            id = it.id,
-                            nombre = it.nombre,
-                            icono = "📚", // Icono por defecto
-                            gradoNombre = "", // Dato no disponible en este endpoint
-                            profesorId = it.profesorId
-                        )
-                    }
-                    cursosAdapter.submitList(cursosParaUi)
+                    
+                    // Para obtener el número real de alumnos, consultamos cada curso
+                    val cursosConDetalles = cursosDesdeApi.map { cursoNet ->
+                        async {
+                            val alumnosResponse = RetrofitClient.instance.getAlumnosPorCurso(cursoNet.id)
+                            val cantAlumnos = if (alumnosResponse.isSuccessful) alumnosResponse.body()?.size ?: 0 else 0
+                            
+                            Curso(
+                                id = cursoNet.id,
+                                nombre = cursoNet.nombre,
+                                icono = obtenerIconoPorNombre(cursoNet.nombre),
+                                gradoNombre = "Grado", // Podría venir de la API en el futuro
+                                profesorId = cursoNet.profesorId,
+                                cantAlumnos = cantAlumnos
+                            )
+                        }
+                    }.awaitAll()
+
+                    cursosAdapter.submitList(cursosConDetalles)
                 } else {
-                    Toast.makeText(this@ProfesorHomeActivity, "Error al cargar los cursos", Toast.LENGTH_SHORT).show()
-                    Log.e("ProfesorHome", "Error: ${response.code()} - ${response.message()}")
+                    Log.e("ProfesorHome", "Error cargando cursos: ${response.code()}")
                 }
-            } catch (e: IOException) {
-                Toast.makeText(this@ProfesorHomeActivity, "Error de conexión. Verifique su red.", Toast.LENGTH_SHORT).show()
-                Log.e("ProfesorHome", "Error de red", e)
             } catch (e: Exception) {
-                Toast.makeText(this@ProfesorHomeActivity, "Ocurrió un error inesperado", Toast.LENGTH_SHORT).show()
-                Log.e("ProfesorHome", "Error inesperado", e)
+                Log.e("ProfesorHome", "Error en cargarCursosDesdeApi", e)
+            } finally {
+                binding.progressHome.visibility = View.GONE
             }
         }
-        // TODO: Reemplazar con datos reales
         binding.tvCantidadPendientes.text = "3"
+    }
+
+    private fun obtenerIconoPorNombre(nombre: String): String {
+        return when {
+            nombre.contains("Matem", true) -> "📐"
+            nombre.contains("Ciencia", true) -> "🔬"
+            nombre.contains("Comunic", true) -> "📚"
+            nombre.contains("Hist", true) -> "📜"
+            nombre.contains("Art", true) -> "🎨"
+            nombre.contains("Ingl", true) -> "🇬🇧"
+            else -> "📘"
+        }
     }
 
     private fun obtenerFechaActual(): String {
