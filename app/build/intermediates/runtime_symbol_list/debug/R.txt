@@ -3490,6 +3490,8 @@ int id mtrl_view_tag_bottom_padding 0x7f080143
 int id multiply 0x7f080144
 int id nav_asistencia 0x7f080145
 int id nav_controller_view_tag 0x7f080146
+int id nav_graph 0x7f080247
+int id nav_host_fragment 0x7f080248
 int id nav_host_fragment_container 0x7f080147
 int id nav_inicio 0x7f080148
 int id nav_notas 0x7f080149
@@ -3701,11 +3703,9 @@ int id tvError 0x7f080215
 int id tvFecha 0x7f080216
 int id tvGradoCurso 0x7f080217
 int id tvIconoCurso 0x7f080218
-int id tvIconoNota 0x7f080219
 int id tvListaTitulo 0x7f08021a
 int id tvMetaCurso 0x7f08021b
 int id tvNombreCurso 0x7f08021c
-int id tvNombreMateria 0x7f08021d
 int id tvNombreProfesor 0x7f08021e
 int id tvNota 0x7f08021f
 int id tvPerfilAvatar 0x7f08023e
@@ -3713,7 +3713,6 @@ int id tvPerfilEmail 0x7f08023f
 int id tvPerfilId 0x7f080240
 int id tvPerfilNombre 0x7f080241
 int id tvPerfilRol 0x7f080242
-int id tvProfesorNota 0x7f080220
 int id tvSheetTitle 0x7f080221
 int id tvSubtituloPestana 0x7f080245
 int id tvTituloPestana 0x7f080246
@@ -3724,7 +3723,6 @@ int id unlabeled 0x7f080225
 int id up 0x7f080226
 int id useLogo 0x7f080227
 int id vertical_only 0x7f080228
-int id viewPager 0x7f08023b
 int id view_offset_helper 0x7f080229
 int id view_transition 0x7f08022a
 int id view_tree_lifecycle_owner 0x7f08022b
@@ -3891,7 +3889,6 @@ int layout item_alumno_nota 0x7f0b0038
 int layout item_curso 0x7f0b0039
 int layout item_curso_profesor 0x7f0b003a
 int layout item_nota 0x7f0b003b
-int layout item_nota_alumno 0x7f0b003c
 int layout layout_bottom_sheet_cursos 0x7f0b003d
 int layout m3_alert_dialog 0x7f0b003e
 int layout m3_alert_dialog_actions 0x7f0b003f
@@ -3954,10 +3951,10 @@ int layout select_dialog_item_material 0x7f0b0077
 int layout select_dialog_multichoice_material 0x7f0b0078
 int layout select_dialog_singlechoice_material 0x7f0b0079
 int layout support_simple_spinner_dropdown_item 0x7f0b007a
-int menu menu_alumno 0x7f0d0000
 int menu menu_profesor 0x7f0d0001
 int mipmap ic_launcher 0x7f0e0000
 int mipmap ic_launcher_round 0x7f0e0001
+int navigation nav_graph 0x7f130000
 int plurals mtrl_badge_content_description 0x7f0f0000
 int string abc_action_bar_home_description 0x7f100000
 int string abc_action_bar_up_description 0x7f100001

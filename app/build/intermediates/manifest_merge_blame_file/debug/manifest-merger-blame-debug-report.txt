@@ -27,7 +27,7 @@
 18-->[androidx.core:core:1.12.0] C:\Users\mauri\.gradle\caches\transforms-3\88e34bdf4456fda3f546daabbcf3b977\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
 19
 20    <application
-20-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:7:5-36:19
+20-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:7:5-34:19
 21        android:allowBackup="true"
 21-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:8:9-35
 22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -81,129 +81,117 @@
 50            android:exported="false" />
 50-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:28:83-107
 51        <activity
-51-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:9-119
-52            android:name="com.academicapp.ui.profesor.asistencia.SeleccionarCursoAsistenciaActivity"
-52-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:19-92
+51-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:9-101
+52            android:name="com.academicapp.ui.profesor.notas.IngresarNotasActivity"
+52-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:19-74
 53            android:exported="false" />
-53-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:93-117
+53-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:75-99
 54        <activity
-54-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:9-101
-55            android:name="com.academicapp.ui.profesor.notas.IngresarNotasActivity"
-55-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:19-74
+54-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:9-102
+55            android:name="com.academicapp.ui.profesor.notas.ModificarNotasActivity"
+55-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:19-75
 56            android:exported="false" />
-56-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:75-99
+56-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:76-100
 57        <activity
-57-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:9-102
-58            android:name="com.academicapp.ui.profesor.notas.ModificarNotasActivity"
-58-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:19-75
+57-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:9-104
+58            android:name="com.academicapp.ui.profesor.notas.VerNotasProfesorActivity"
+58-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:19-77
 59            android:exported="false" />
-59-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:76-100
+59-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:78-102
 60        <activity
-60-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:9-104
-61            android:name="com.academicapp.ui.profesor.notas.VerNotasProfesorActivity"
-61-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:19-77
+60-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:9-116
+61            android:name="com.academicapp.ui.profesor.justificacion.GestionJustificacionActivity"
+61-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:19-89
 62            android:exported="false" />
-62-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:78-102
-63        <activity
-63-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:33:9-108
-64            android:name="com.academicapp.ui.profesor.notas.SeleccionarCursoNotaActivity"
-64-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:33:19-81
-65            android:exported="false" />
-65-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:33:82-106
-66        <activity
-66-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:34:9-116
-67            android:name="com.academicapp.ui.profesor.justificacion.GestionJustificacionActivity"
-67-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:34:19-89
-68            android:exported="false" />
-68-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:34:90-114
-69
-70        <provider
-70-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-71            android:name="androidx.startup.InitializationProvider"
-71-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-72            android:authorities="com.academicapp.androidx-startup"
-72-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-73            android:exported="false" >
-73-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+62-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:90-114
+63
+64        <provider
+64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+65            android:name="androidx.startup.InitializationProvider"
+65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+66            android:authorities="com.academicapp.androidx-startup"
+66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+67            android:exported="false" >
+67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+68            <meta-data
+68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+69                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+69-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+70                android:value="androidx.startup" />
+70-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+71            <meta-data
+71-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\mauri\.gradle\caches\transforms-3\8ffebc0ac4f110a5fc1eed49e271a470\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+72                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+72-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\mauri\.gradle\caches\transforms-3\8ffebc0ac4f110a5fc1eed49e271a470\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+73                android:value="androidx.startup" />
+73-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\mauri\.gradle\caches\transforms-3\8ffebc0ac4f110a5fc1eed49e271a470\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
 74            <meta-data
-74-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-75                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-75-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+74-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+75                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+75-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
 76                android:value="androidx.startup" />
-76-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-77            <meta-data
-77-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\mauri\.gradle\caches\transforms-3\8ffebc0ac4f110a5fc1eed49e271a470\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
-78                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-78-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\mauri\.gradle\caches\transforms-3\8ffebc0ac4f110a5fc1eed49e271a470\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
-79                android:value="androidx.startup" />
-79-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\mauri\.gradle\caches\transforms-3\8ffebc0ac4f110a5fc1eed49e271a470\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
-80            <meta-data
-80-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-81                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-81-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-82                android:value="androidx.startup" />
-82-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-83        </provider>
-84
-85        <uses-library
-85-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
-86            android:name="androidx.window.extensions"
-86-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
-87            android:required="false" />
-87-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
-88        <uses-library
-88-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
-89            android:name="androidx.window.sidecar"
-89-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
-90            android:required="false" />
-90-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
-91
-92        <service
-92-->[androidx.room:room-runtime:2.6.1] C:\Users\mauri\.gradle\caches\transforms-3\425deab3d17e660147e54045034e53b5\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
-93            android:name="androidx.room.MultiInstanceInvalidationService"
-93-->[androidx.room:room-runtime:2.6.1] C:\Users\mauri\.gradle\caches\transforms-3\425deab3d17e660147e54045034e53b5\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
-94            android:directBootAware="true"
-94-->[androidx.room:room-runtime:2.6.1] C:\Users\mauri\.gradle\caches\transforms-3\425deab3d17e660147e54045034e53b5\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
-95            android:exported="false" />
-95-->[androidx.room:room-runtime:2.6.1] C:\Users\mauri\.gradle\caches\transforms-3\425deab3d17e660147e54045034e53b5\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
-96
-97        <receiver
-97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-98            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-99            android:directBootAware="false"
-99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-100            android:enabled="true"
-100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-101            android:exported="true"
-101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-102            android:permission="android.permission.DUMP" >
-102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+76-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+77        </provider>
+78
+79        <uses-library
+79-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+80            android:name="androidx.window.extensions"
+80-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+81            android:required="false" />
+81-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+82        <uses-library
+82-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+83            android:name="androidx.window.sidecar"
+83-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+84            android:required="false" />
+84-->[androidx.window:window:1.0.0] C:\Users\mauri\.gradle\caches\transforms-3\40439009d0f25eb1240baadddd268446\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+85
+86        <service
+86-->[androidx.room:room-runtime:2.6.1] C:\Users\mauri\.gradle\caches\transforms-3\425deab3d17e660147e54045034e53b5\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+87            android:name="androidx.room.MultiInstanceInvalidationService"
+87-->[androidx.room:room-runtime:2.6.1] C:\Users\mauri\.gradle\caches\transforms-3\425deab3d17e660147e54045034e53b5\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+88            android:directBootAware="true"
+88-->[androidx.room:room-runtime:2.6.1] C:\Users\mauri\.gradle\caches\transforms-3\425deab3d17e660147e54045034e53b5\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+89            android:exported="false" />
+89-->[androidx.room:room-runtime:2.6.1] C:\Users\mauri\.gradle\caches\transforms-3\425deab3d17e660147e54045034e53b5\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+90
+91        <receiver
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+92            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+93            android:directBootAware="false"
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+94            android:enabled="true"
+94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+95            android:exported="true"
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+96            android:permission="android.permission.DUMP" >
+96-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+97            <intent-filter>
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+98                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+99            </intent-filter>
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+101                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+102            </intent-filter>
 103            <intent-filter>
-103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-104                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+104                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
 105            </intent-filter>
 106            <intent-filter>
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-107                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+107                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
 108            </intent-filter>
-109            <intent-filter>
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-110                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-111            </intent-filter>
-112            <intent-filter>
-112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-113                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\mauri\.gradle\caches\transforms-3\8c751802723a10390700433576126672\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-114            </intent-filter>
-115        </receiver>
-116    </application>
-117
-118</manifest>
+109        </receiver>
+110    </application>
+111
+112</manifest>

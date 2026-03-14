@@ -50,6 +50,8 @@ class ListaCursosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         sessionManager = SessionManager(requireContext())
+        
+        // Soporte para Navigation Component y newInstance tradicional
         tipo = arguments?.getString("tipo") ?: "asistencia"
 
         setupUI()

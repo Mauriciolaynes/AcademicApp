@@ -3491,6 +3491,8 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id nav_asistencia
 id nav_controller_view_tag
+id nav_graph
+id nav_host_fragment
 id nav_host_fragment_container
 id nav_inicio
 id nav_notas
@@ -3702,11 +3704,9 @@ id tvError
 id tvFecha
 id tvGradoCurso
 id tvIconoCurso
-id tvIconoNota
 id tvListaTitulo
 id tvMetaCurso
 id tvNombreCurso
-id tvNombreMateria
 id tvNombreProfesor
 id tvNota
 id tvPerfilAvatar
@@ -3714,7 +3714,6 @@ id tvPerfilEmail
 id tvPerfilId
 id tvPerfilNombre
 id tvPerfilRol
-id tvProfesorNota
 id tvSheetTitle
 id tvSubtituloPestana
 id tvTituloPestana
@@ -3725,7 +3724,6 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
-id viewPager
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3892,7 +3890,6 @@ layout item_alumno_nota
 layout item_curso
 layout item_curso_profesor
 layout item_nota
-layout item_nota_alumno
 layout layout_bottom_sheet_cursos
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3955,10 +3952,10 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
-menu menu_alumno
 menu menu_profesor
 mipmap ic_launcher
 mipmap ic_launcher_round
+navigation nav_graph
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description

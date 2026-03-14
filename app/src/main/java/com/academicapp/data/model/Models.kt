@@ -19,21 +19,6 @@ data class Profesor(
     val especialidad: String = ""
 )
 
-data class Alumno(
-    val id: Int = 0,
-    val usuarioId: Int = 0,
-    val nombre: String = "",
-    val apellido: String = "",
-    val gradoId: Int = 0,
-    val codigoEstudiante: String = ""
-)
-
-data class Grado(
-    val id: Int = 0,
-    val nombre: String = "",
-    val nivel: String = "",
-    val seccion: String = ""
-)
 
 data class Curso(
     val id: Int = 0,

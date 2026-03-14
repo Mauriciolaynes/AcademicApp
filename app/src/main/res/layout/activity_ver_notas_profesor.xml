@@ -58,7 +58,7 @@
                 android:clipToPadding="false"
                 android:paddingVertical="8dp"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_nota_alumno" />
+                tools:listitem="@layout/item_nota" />
 
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
     </androidx.cardview.widget.CardView>

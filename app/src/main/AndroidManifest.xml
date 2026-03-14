@@ -26,11 +26,9 @@
         <!-- PROFESOR -->
         <activity android:name=".ui.profesor.ProfesorHomeActivity" android:exported="false"/>
         <activity android:name=".ui.profesor.asistencia.MarcarAsistenciaActivity" android:exported="false"/>
-        <activity android:name=".ui.profesor.asistencia.SeleccionarCursoAsistenciaActivity" android:exported="false"/>
         <activity android:name=".ui.profesor.notas.IngresarNotasActivity" android:exported="false"/>
         <activity android:name=".ui.profesor.notas.ModificarNotasActivity" android:exported="false"/>
         <activity android:name=".ui.profesor.notas.VerNotasProfesorActivity" android:exported="false"/>
-        <activity android:name=".ui.profesor.notas.SeleccionarCursoNotaActivity" android:exported="false"/>
         <activity android:name=".ui.profesor.justificacion.GestionJustificacionActivity" android:exported="false"/>
 
     </application>

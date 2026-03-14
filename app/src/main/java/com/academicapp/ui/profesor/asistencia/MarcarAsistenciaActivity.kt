@@ -70,7 +70,6 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
 
                     val listaFinal = alumnosApi.map { alumno ->
                         async {
-                            // Intentamos ver si ya tiene asistencia grabada (GET asistencias/{clase}/{alumno})
                             val resAsis = RetrofitClient.instance.visualizarAsistencia(cursoId, alumno.id_usuario)
                             
                             val estadoCargado = if (resAsis.isSuccessful && resAsis.body() != null) {

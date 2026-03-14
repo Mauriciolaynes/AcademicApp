@@ -49,9 +49,6 @@
             android:name="com.academicapp.ui.profesor.asistencia.MarcarAsistenciaActivity"
             android:exported="false" />
         <activity
-            android:name="com.academicapp.ui.profesor.asistencia.SeleccionarCursoAsistenciaActivity"
-            android:exported="false" />
-        <activity
             android:name="com.academicapp.ui.profesor.notas.IngresarNotasActivity"
             android:exported="false" />
         <activity
@@ -59,9 +56,6 @@
             android:exported="false" />
         <activity
             android:name="com.academicapp.ui.profesor.notas.VerNotasProfesorActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.academicapp.ui.profesor.notas.SeleccionarCursoNotaActivity"
             android:exported="false" />
         <activity
             android:name="com.academicapp.ui.profesor.justificacion.GestionJustificacionActivity"
