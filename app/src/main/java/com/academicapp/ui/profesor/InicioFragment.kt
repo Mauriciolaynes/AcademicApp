@@ -13,6 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.academicapp.data.model.Curso
+import com.academicapp.data.model.EstadoSolicitud
 import com.academicapp.databinding.FragmentInicioBinding
 import com.academicapp.network.RetrofitClient
 import com.academicapp.ui.profesor.asistencia.MarcarAsistenciaActivity
@@ -53,6 +54,7 @@ class InicioFragment : Fragment() {
         setupRecyclerView()
         setupListeners()
         cargarCursosDesdeApi()
+        actualizarContadorJustificaciones()
     }
 
     private fun setupUI() {
@@ -65,10 +67,8 @@ class InicioFragment : Fragment() {
         cursosAdapter = CursosProfesorAdapter { curso ->
             abrirActividadSegunContexto(MarcarAsistenciaActivity::class.java, curso)
         }
-        binding.rvCursos.apply {
-            layoutManager = LinearLayoutManager(requireContext())
-            adapter = cursosAdapter
-        }
+        binding.rvCursos.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvCursos.adapter = cursosAdapter
     }
 
     private fun setupListeners() {
@@ -163,7 +163,6 @@ class InicioFragment : Fragment() {
                 val response = RetrofitClient.instance.getCursosPorProfesor(profesorId)
                 if (response.isSuccessful && response.body() != null) {
                     val cursosDesdeApi = response.body()!!
-                    
                     val cursosConDetalles = cursosDesdeApi.map { cursoNet ->
                         async {
                             val alumnosResponse = RetrofitClient.instance.getAlumnosPorCurso(cursoNet.id)
@@ -179,7 +178,6 @@ class InicioFragment : Fragment() {
                             )
                         }
                     }.awaitAll()
-
                     cursosAdapter.submitList(cursosConDetalles)
                 }
             } catch (e: Exception) {
@@ -188,7 +186,20 @@ class InicioFragment : Fragment() {
                 binding.progressHome.visibility = View.GONE
             }
         }
-        binding.tvCantidadPendientes.text = "3"
+    }
+
+    private fun actualizarContadorJustificaciones() {
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitClient.instance.getJustificaciones()
+                if (response.isSuccessful && response.body() != null) {
+                    val totalPendientes = response.body()!!.count { it.estado == EstadoSolicitud.PENDIENTE }
+                    binding.tvCantidadPendientes.text = totalPendientes.toString()
+                }
+            } catch (e: Exception) {
+                Log.e("InicioFragment", "Error al cargar contador", e)
+            }
+        }
     }
 
     private fun obtenerIconoPorNombre(nombre: String): String {
@@ -206,6 +217,11 @@ class InicioFragment : Fragment() {
     private fun obtenerFechaActual(): String {
         val sdf = SimpleDateFormat("EEEE, dd MMM yyyy", Locale("es", "PE"))
         return sdf.format(Date()).replaceFirstChar { it.uppercase() }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        actualizarContadorJustificaciones()
     }
 
     override fun onDestroyView() {

@@ -3243,6 +3243,7 @@ int id animateToEnd 0x7f08004d
 int id animateToStart 0x7f08004e
 int id antiClockwise 0x7f08004f
 int id anticipate 0x7f080050
+int id appBarLayout 0x7f080249
 int id arc 0x7f080051
 int id asConfigured 0x7f080052
 int id async 0x7f080053
@@ -3263,6 +3264,7 @@ int id bounceBoth 0x7f080061
 int id bounceEnd 0x7f080062
 int id bounceStart 0x7f080063
 int id btnActualizarNotas 0x7f080064
+int id btnAprobar 0x7f08024a
 int id btnBack 0x7f080065
 int id btnDeleteNota 0x7f080066
 int id btnGuardarAsistencia 0x7f080067
@@ -3272,6 +3274,7 @@ int id btnLogin 0x7f08006a
 int id btnLogout 0x7f08023c
 int id btnMarcarAsistencia 0x7f08006b
 int id btnModificarNotas 0x7f08006c
+int id btnRechazar 0x7f08024b
 int id btnVerNotas 0x7f08006d
 int id buttonPanel 0x7f08006e
 int id cache_measures 0x7f08006f
@@ -3417,6 +3420,7 @@ int id jumpToEnd 0x7f0800fa
 int id jumpToStart 0x7f0800fb
 int id labeled 0x7f0800fc
 int id layout 0x7f0800fd
+int id layoutAcciones 0x7f08024c
 int id layoutHeader 0x7f0800fe
 int id left 0x7f0800ff
 int id leftToRight 0x7f080100
@@ -3553,6 +3557,7 @@ int id pressed 0x7f080180
 int id progressAsistencia 0x7f080181
 int id progressCursos 0x7f08023d
 int id progressHome 0x7f080182
+int id progressJustificaciones 0x7f08024d
 int id progressLogin 0x7f080183
 int id progressNotas 0x7f080184
 int id progressSheet 0x7f080185
@@ -3577,6 +3582,7 @@ int id rtl 0x7f080197
 int id rvAlumnos 0x7f080198
 int id rvCursos 0x7f080199
 int id rvCursosSheet 0x7f08019a
+int id rvJustificaciones 0x7f08024e
 int id rvNotas 0x7f08019b
 int id save_non_transition_alpha 0x7f08019c
 int id save_overlay_view 0x7f08019d
@@ -3641,6 +3647,7 @@ int id stretch 0x7f0801d7
 int id submenuarrow 0x7f0801d8
 int id submit_area 0x7f0801d9
 int id supportScrollUp 0x7f0801da
+int id swipeRefresh 0x7f08024f
 int id swipeRefreshLayout 0x7f0801db
 int id tabMode 0x7f0801dc
 int id tag_accessibility_actions 0x7f0801dd
@@ -3679,6 +3686,7 @@ int id title 0x7f0801fd
 int id titleDividerNoCustom 0x7f0801fe
 int id title_template 0x7f0801ff
 int id toggle 0x7f080200
+int id toolbar 0x7f080250
 int id top 0x7f080201
 int id topPanel 0x7f080202
 int id touch_outside 0x7f080203
@@ -3700,11 +3708,14 @@ int id tvDescripcion 0x7f080212
 int id tvDetalleClase 0x7f080213
 int id tvDetalleCurso 0x7f080214
 int id tvError 0x7f080215
+int id tvEstado 0x7f080251
 int id tvFecha 0x7f080216
 int id tvGradoCurso 0x7f080217
 int id tvIconoCurso 0x7f080218
 int id tvListaTitulo 0x7f08021a
 int id tvMetaCurso 0x7f08021b
+int id tvMotivo 0x7f080252
+int id tvNoData 0x7f080253
 int id tvNombreCurso 0x7f08021c
 int id tvNombreProfesor 0x7f08021e
 int id tvNota 0x7f08021f
@@ -3855,6 +3866,7 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0b0018
 int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
+int layout activity_gestion_justificacion 0x7f0b007f
 int layout activity_ingresar_notas 0x7f0b001d
 int layout activity_login 0x7f0b001e
 int layout activity_marcar_asistencia 0x7f0b001f
@@ -3888,6 +3900,7 @@ int layout item_alumno_asistencia 0x7f0b0037
 int layout item_alumno_nota 0x7f0b0038
 int layout item_curso 0x7f0b0039
 int layout item_curso_profesor 0x7f0b003a
+int layout item_justificacion 0x7f0b0080
 int layout item_nota 0x7f0b003b
 int layout layout_bottom_sheet_cursos 0x7f0b003d
 int layout m3_alert_dialog 0x7f0b003e

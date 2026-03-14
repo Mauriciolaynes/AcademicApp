@@ -1,5 +1,7 @@
 package com.academicapp.data.model
 
+import com.google.gson.annotations.SerializedName
+
 data class Usuario(
     val id: Int = 0,
     val nombre: String = "",
@@ -56,15 +58,29 @@ data class Nota(
 )
 
 data class Justificacion(
+    @SerializedName("id_justificacion")
     val id: Int = 0,
+    @SerializedName("id_alumno")
     val alumnoId: Int = 0,
+    @SerializedName("alumno_nombre")
     val alumnoNombre: String = "",
+    @SerializedName("id_asistencia")
     val asistenciaId: Int = 0,
+    @SerializedName("nombre_curso")
     val cursoNombre: String = "",
     val fecha: String = "",
     val motivo: String = "",
     var estado: EstadoSolicitud = EstadoSolicitud.PENDIENTE,
-    val respuestaProfesor: String = ""
+    @SerializedName("respuesta_profesor")
+    val respuestaProfesor: String? = null
+)
+
+data class JustificacionUpdateRequest(
+    @SerializedName("id_justificacion")
+    val idJustificacion: Int,
+    val estado: EstadoSolicitud,
+    @SerializedName("respuesta_profesor")
+    val respuestaProfesor: String
 )
 
 data class RevisionNota(

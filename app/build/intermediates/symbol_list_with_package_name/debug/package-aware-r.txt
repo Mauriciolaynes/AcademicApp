@@ -3244,6 +3244,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id appBarLayout
 id arc
 id asConfigured
 id async
@@ -3264,6 +3265,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btnActualizarNotas
+id btnAprobar
 id btnBack
 id btnDeleteNota
 id btnGuardarAsistencia
@@ -3273,6 +3275,7 @@ id btnLogin
 id btnLogout
 id btnMarcarAsistencia
 id btnModificarNotas
+id btnRechazar
 id btnVerNotas
 id buttonPanel
 id cache_measures
@@ -3418,6 +3421,7 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutAcciones
 id layoutHeader
 id left
 id leftToRight
@@ -3554,6 +3558,7 @@ id pressed
 id progressAsistencia
 id progressCursos
 id progressHome
+id progressJustificaciones
 id progressLogin
 id progressNotas
 id progressSheet
@@ -3578,6 +3583,7 @@ id rtl
 id rvAlumnos
 id rvCursos
 id rvCursosSheet
+id rvJustificaciones
 id rvNotas
 id save_non_transition_alpha
 id save_overlay_view
@@ -3642,6 +3648,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id swipeRefresh
 id swipeRefreshLayout
 id tabMode
 id tag_accessibility_actions
@@ -3680,6 +3687,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -3701,11 +3709,14 @@ id tvDescripcion
 id tvDetalleClase
 id tvDetalleCurso
 id tvError
+id tvEstado
 id tvFecha
 id tvGradoCurso
 id tvIconoCurso
 id tvListaTitulo
 id tvMetaCurso
+id tvMotivo
+id tvNoData
 id tvNombreCurso
 id tvNombreProfesor
 id tvNota
@@ -3856,6 +3867,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_gestion_justificacion
 layout activity_ingresar_notas
 layout activity_login
 layout activity_marcar_asistencia
@@ -3889,6 +3901,7 @@ layout item_alumno_asistencia
 layout item_alumno_nota
 layout item_curso
 layout item_curso_profesor
+layout item_justificacion
 layout item_nota
 layout layout_bottom_sheet_cursos
 layout m3_alert_dialog

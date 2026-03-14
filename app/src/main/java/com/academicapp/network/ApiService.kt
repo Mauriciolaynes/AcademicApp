@@ -4,6 +4,8 @@ import com.academicapp.network.model.Asistencia
 import com.academicapp.network.model.Curso
 import com.academicapp.network.model.Nota
 import com.academicapp.network.model.Usuario
+import com.academicapp.data.model.Justificacion
+import com.academicapp.data.model.JustificacionUpdateRequest
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -50,4 +52,10 @@ interface ApiService {
 
     @GET("notas/{id}")
     suspend fun visualizarNota(@Path("id") id: Int): Response<Nota>
+
+    @GET("justificaciones")
+    suspend fun getJustificaciones(): Response<List<Justificacion>>
+
+    @PUT("justificaciones")
+    suspend fun actualizarEstadoJustificacion(@Body request: JustificacionUpdateRequest): Response<Map<String, String>>
 }
