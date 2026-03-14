@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:2:1-35:12
 MERGED from [androidx.navigation:navigation-common:2.7.6] C:\Users\mauri\.gradle\caches\transforms-3\3cb79432b31b379d9a69d38a5dd4696a\transformed\navigation-common-2.7.6\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] C:\Users\mauri\.gradle\caches\transforms-3\2fef7ea8f3e752cc2542cfdba8cc6cdc\transformed\navigation-common-ktx-2.7.6\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-runtime:2.7.6] C:\Users\mauri\.gradle\caches\transforms-3\72998f69df664f3f21d3d831c0a2c80b\transformed\navigation-runtime-2.7.6\AndroidManifest.xml:17:1-22:12
@@ -90,8 +90,8 @@ ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main
 	android:name
 		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:5:22-76
 application
-ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:7:5-36:19
-INJECTED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:7:5-36:19
+ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:7:5-34:19
+INJECTED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:7:5-34:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\mauri\.gradle\caches\transforms-3\f9a9e7dabb2e10941cdaf61db9bb3907\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\mauri\.gradle\caches\transforms-3\f9a9e7dabb2e10941cdaf61db9bb3907\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\mauri\.gradle\caches\transforms-3\ec5b6e5302e19e5d855ab999e1d75174\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -158,42 +158,30 @@ ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main
 		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:28:83-107
 	android:name
 		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:28:19-82
-activity#com.academicapp.ui.profesor.asistencia.SeleccionarCursoAsistenciaActivity
-ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:9-119
-	android:exported
-		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:93-117
-	android:name
-		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:19-92
 activity#com.academicapp.ui.profesor.notas.IngresarNotasActivity
-ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:9-101
+ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:9-101
 	android:exported
-		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:75-99
+		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:75-99
 	android:name
-		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:19-74
+		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:19-74
 activity#com.academicapp.ui.profesor.notas.ModificarNotasActivity
-ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:9-102
+ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:9-102
 	android:exported
-		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:76-100
+		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:76-100
 	android:name
-		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:19-75
+		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:19-75
 activity#com.academicapp.ui.profesor.notas.VerNotasProfesorActivity
-ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:9-104
+ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:9-104
 	android:exported
-		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:78-102
+		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:78-102
 	android:name
-		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:19-77
-activity#com.academicapp.ui.profesor.notas.SeleccionarCursoNotaActivity
-ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:33:9-108
-	android:exported
-		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:33:82-106
-	android:name
-		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:33:19-81
+		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:19-77
 activity#com.academicapp.ui.profesor.justificacion.GestionJustificacionActivity
-ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:34:9-116
+ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:9-116
 	android:exported
-		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:34:90-114
+		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:90-114
 	android:name
-		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:34:19-89
+		ADDED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:19-89
 uses-sdk
 INJECTED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml
