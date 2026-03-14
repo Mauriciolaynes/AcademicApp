@@ -37,10 +37,8 @@ class NotasAdapter(
             binding.tvDescripcion.text = "Calificación registrada"
             binding.tvNota.text = nota.calificacion.toString()
             
-            // Acción de editar al tocar la tarjeta
             binding.root.setOnClickListener { onEdit(nota) }
             
-            // Acción de eliminar al tocar el icono de basurero
             binding.btnDeleteNota.setOnClickListener { onDelete(nota) }
         }
     }

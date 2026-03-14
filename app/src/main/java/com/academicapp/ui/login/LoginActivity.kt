@@ -6,7 +6,6 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.academicapp.data.model.Rol
 import com.academicapp.databinding.ActivityLoginBinding
 import com.academicapp.network.RetrofitClient
 import com.academicapp.ui.profesor.ProfesorHomeActivity
@@ -36,10 +35,9 @@ class LoginActivity : AppCompatActivity() {
 
             if (codigo.isEmpty() || password.isEmpty()) {
                 mostrarError("Por favor completa todos los campos")
-                return@setOnClickListener
+            } else {
+                iniciarSesion(codigo, password)
             }
-
-            iniciarSesion(codigo, password)
         }
     }
 
@@ -59,7 +57,7 @@ class LoginActivity : AppCompatActivity() {
                     val receivedRolId = usuario.id_rol.trim()
                     
                     if (receivedRolId == "1") {
-                        sessionManager.guardarSesion(usuario.id_usuario, usuario.nombre, usuario.email, Rol.PROFESOR)
+                        sessionManager.guardarSesion(usuario.id_usuario, usuario.nombre, usuario.email)
                         navegarAlHome()
                     } else {
                         mostrarError("Esta aplicación es exclusiva para profesores.")

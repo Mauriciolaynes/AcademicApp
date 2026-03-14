@@ -42,10 +42,8 @@ class VerNotasProfesorActivity : AppCompatActivity() {
             onEdit = { nota -> showEditDialog(nota) },
             onDelete = { nota -> confirmarEliminacion(nota) }
         )
-        binding.rvNotas.apply {
-            layoutManager = LinearLayoutManager(this@VerNotasProfesorActivity)
-            adapter = notasAdapter
-        }
+        binding.rvNotas.layoutManager = LinearLayoutManager(this)
+        binding.rvNotas.adapter = notasAdapter
     }
 
     private fun setupSwipeToRefresh() {
@@ -53,32 +51,30 @@ class VerNotasProfesorActivity : AppCompatActivity() {
     }
 
     private fun cargarDatos() {
+        val context = this
         binding.swipeRefreshLayout.isRefreshing = true
         lifecycleScope.launch {
             try {
-                // 1. Cargamos alumnos para los nombres
                 val resAlu = RetrofitClient.instance.getAlumnosPorCurso(cursoId)
                 if (resAlu.isSuccessful) resAlu.body()?.forEach { alumnosMap[it.id_usuario] = it.nombre }
 
-                // 2. Cargamos TODAS las notas del servidor usando el nuevo método GET /notas
                 val response = RetrofitClient.instance.getNotas()
                 if (response.isSuccessful && response.body() != null) {
-                    // 3. Filtramos por cursoId para mostrar solo las de este curso
                     val notasDelCurso = response.body()!!.filter { it.id_curso == cursoId }
                     
                     notasAdapter.setAlumnosMap(alumnosMap)
                     notasAdapter.submitList(notasDelCurso)
                     
                     if (notasDelCurso.isEmpty()) {
-                        Toast.makeText(this@VerNotasProfesorActivity, "No hay notas para este curso", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "No hay notas para este curso", Toast.LENGTH_SHORT).show()
                     }
                 } else {
                     Log.e("VerNotas", "Error: ${response.code()}")
-                    Toast.makeText(this@VerNotasProfesorActivity, "Error al cargar datos del servidor", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Error al cargar datos del servidor", Toast.LENGTH_SHORT).show()
                 }
             } catch (e: Exception) {
                 Log.e("VerNotas", "Error de red", e)
-                Toast.makeText(this@VerNotasProfesorActivity, "Sin conexión al servidor", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Sin conexión al servidor", Toast.LENGTH_SHORT).show()
             } finally {
                 binding.swipeRefreshLayout.isRefreshing = false
             }
@@ -106,15 +102,16 @@ class VerNotasProfesorActivity : AppCompatActivity() {
     }
 
     private fun actualizarNota(nota: Nota) {
+        val context = this
         lifecycleScope.launch {
             try {
                 val res = RetrofitClient.instance.editarNota(nota)
                 if (res.isSuccessful) {
-                    Toast.makeText(this@VerNotasProfesorActivity, "Actualizado correctamente", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Actualizado correctamente", Toast.LENGTH_SHORT).show()
                     cargarDatos()
                 }
             } catch (e: Exception) {
-                Toast.makeText(this@VerNotasProfesorActivity, "Error al actualizar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Error al actualizar", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -129,15 +126,16 @@ class VerNotasProfesorActivity : AppCompatActivity() {
     }
 
     private fun eliminarNota(id: Int) {
+        val context = this
         lifecycleScope.launch {
             try {
                 val res = RetrofitClient.instance.eliminarNota(id)
                 if (res.isSuccessful) {
-                    Toast.makeText(this@VerNotasProfesorActivity, "Nota eliminada", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Nota eliminada", Toast.LENGTH_SHORT).show()
                     cargarDatos()
                 }
             } catch (e: Exception) {
-                Toast.makeText(this@VerNotasProfesorActivity, "Error al eliminar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Error al eliminar", Toast.LENGTH_SHORT).show()
             }
         }
     }

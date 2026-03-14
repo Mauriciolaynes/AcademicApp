@@ -14,8 +14,6 @@ import com.academicapp.network.RetrofitClient
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch
-import java.text.SimpleDateFormat
-import java.util.*
 
 class MarcarAsistenciaActivity : AppCompatActivity() {
 
@@ -45,10 +43,8 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         alumnosAdapter = AlumnosAsistenciaAdapter { }
-        binding.rvAlumnos.apply {
-            layoutManager = LinearLayoutManager(this@MarcarAsistenciaActivity)
-            adapter = alumnosAdapter
-        }
+        binding.rvAlumnos.layoutManager = LinearLayoutManager(this)
+        binding.rvAlumnos.adapter = alumnosAdapter
     }
 
     private fun cargarDatosDelCurso() {
@@ -59,6 +55,8 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
 
     private fun cargarAlumnosYEstados() {
         if (cursoId == -1) return
+        
+        val context = this
         binding.progressAsistencia.visibility = View.VISIBLE
 
         lifecycleScope.launch {
@@ -97,7 +95,7 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
                 }
             } catch (e: Exception) {
                 Log.e("MarcarAsistencia", "Error al cargar", e)
-                Toast.makeText(this@MarcarAsistenciaActivity, "Error de conexión al cargar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Error de conexión al cargar", Toast.LENGTH_SHORT).show()
             } finally {
                 binding.progressAsistencia.visibility = View.GONE
             }
@@ -114,6 +112,7 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
         val listaAsistencia = alumnosAdapter.currentList
         if (listaAsistencia.isEmpty()) return
 
+        val context = this
         binding.progressAsistencia.visibility = View.VISIBLE
         binding.btnGuardarAsistencia.isEnabled = false
 
@@ -128,10 +127,8 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
                             observacion = item.estado.name
                         )
 
-                        // 1. Intentamos registrar (POST asistencias)
                         val resPost = RetrofitClient.instance.registrarAsistencia(asisDTO)
                         
-                        // Si el servidor responde "Error" en el body (ya existe) o falla el POST, intentamos EDITAR (PUT asistencias)
                         if (resPost.isSuccessful && resPost.body()?.get("res") == "Error") {
                             RetrofitClient.instance.editarAsistencia(asisDTO)
                         } else if (!resPost.isSuccessful) {
@@ -148,17 +145,17 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
                 binding.btnGuardarAsistencia.isEnabled = true
 
                 if (errores == 0) {
-                    Toast.makeText(this@MarcarAsistenciaActivity, "¡Asistencia sincronizada correctamente!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "¡Asistencia sincronizada correctamente!", Toast.LENGTH_LONG).show()
                     finish()
                 } else {
-                    Toast.makeText(this@MarcarAsistenciaActivity, "Se guardó con $errores errores", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Se guardó con $errores errores", Toast.LENGTH_SHORT).show()
                 }
 
             } catch (e: Exception) {
                 binding.progressAsistencia.visibility = View.GONE
                 binding.btnGuardarAsistencia.isEnabled = true
                 Log.e("Asistencia", "Error al guardar", e)
-                Toast.makeText(this@MarcarAsistenciaActivity, "Error de red al guardar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Error de red al guardar", Toast.LENGTH_SHORT).show()
             }
         }
     }

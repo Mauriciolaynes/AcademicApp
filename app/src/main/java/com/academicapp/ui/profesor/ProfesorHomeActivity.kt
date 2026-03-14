@@ -24,7 +24,6 @@ class ProfesorHomeActivity : AppCompatActivity() {
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
         
-        // Esto conecta automáticamente el BottomNav con el NavGraph
         binding.bottomNav.setupWithNavController(navController)
     }
 

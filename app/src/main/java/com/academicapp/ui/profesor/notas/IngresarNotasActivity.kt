@@ -45,10 +45,8 @@ class IngresarNotasActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         adapter = AlumnosNotasAdapter()
-        binding.rvAlumnos.apply {
-            layoutManager = LinearLayoutManager(this@IngresarNotasActivity)
-            this.adapter = this@IngresarNotasActivity.adapter
-        }
+        binding.rvAlumnos.layoutManager = LinearLayoutManager(this)
+        binding.rvAlumnos.adapter = adapter
     }
 
     private fun cargarAlumnos() {
@@ -58,6 +56,7 @@ class IngresarNotasActivity : AppCompatActivity() {
             return
         }
 
+        val context = this
         binding.progressNotas.visibility = View.VISIBLE
         lifecycleScope.launch {
             try {
@@ -70,11 +69,11 @@ class IngresarNotasActivity : AppCompatActivity() {
                     adapter.submitList(uiList)
                     binding.tvDetalleCurso.text = "${uiList.size} alumnos en lista"
                 } else {
-                    Toast.makeText(this@IngresarNotasActivity, "Error al cargar alumnos", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Error al cargar alumnos", Toast.LENGTH_SHORT).show()
                 }
             } catch (e: Exception) {
                 Log.e("IngresarNotas", "Error de red", e)
-                Toast.makeText(this@IngresarNotasActivity, "Error de conexión", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Error de conexión", Toast.LENGTH_SHORT).show()
             } finally {
                 binding.progressNotas.visibility = View.GONE
             }
@@ -97,6 +96,7 @@ class IngresarNotasActivity : AppCompatActivity() {
         val listaNotas = adapter.currentList
         if (listaNotas.isEmpty()) return
 
+        val context = this
         binding.progressNotas.visibility = View.VISIBLE
         binding.btnGuardarNotas.isEnabled = false
 
@@ -122,17 +122,17 @@ class IngresarNotasActivity : AppCompatActivity() {
                 binding.btnGuardarNotas.isEnabled = true
 
                 if (exitosos > 0) {
-                    Toast.makeText(this@IngresarNotasActivity, "¡Se registraron $exitosos notas!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "¡Se registraron $exitosos notas!", Toast.LENGTH_LONG).show()
                     finish()
                 } else {
-                    Toast.makeText(this@IngresarNotasActivity, "No se pudo guardar ninguna nota.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "No se pudo guardar ninguna nota.", Toast.LENGTH_SHORT).show()
                 }
 
             } catch (e: Exception) {
                 binding.progressNotas.visibility = View.GONE
                 binding.btnGuardarNotas.isEnabled = true
                 Log.e("IngresarNotas", "Error al guardar notas", e)
-                Toast.makeText(this@IngresarNotasActivity, "Error de red al guardar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Error de red al guardar", Toast.LENGTH_SHORT).show()
             }
         }
     }

@@ -32,7 +32,6 @@ class AlumnosNotasAdapter : ListAdapter<AlumnoNotaUI, AlumnosNotasAdapter.ViewHo
         fun bind(item: AlumnoNotaUI) {
             binding.tvAlumnoNombre.text = item.nombre
             
-            // Remove existing watcher to avoid recursion or multiple triggers
             textWatcher?.let { binding.etNota.removeTextChangedListener(it) }
             
             binding.etNota.setText(item.nota)

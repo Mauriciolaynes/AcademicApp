@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.academicapp.databinding.ActivityModificarNotasBinding
 import com.academicapp.network.RetrofitClient
 import com.academicapp.network.model.Nota
-import com.academicapp.network.model.Usuario
 import kotlinx.coroutines.launch
 
 class ModificarNotasActivity : AppCompatActivity() {
@@ -47,19 +46,18 @@ class ModificarNotasActivity : AppCompatActivity() {
             onEdit = { nota -> showEditDialog(nota) },
             onDelete = { nota -> confirmarEliminacion(nota) }
         )
-        binding.rvAlumnos.apply {
-            layoutManager = LinearLayoutManager(this@ModificarNotasActivity)
-            adapter = this@ModificarNotasActivity.adapter
-        }
+        binding.rvAlumnos.layoutManager = LinearLayoutManager(this)
+        binding.rvAlumnos.adapter = adapter
     }
 
     private fun cargarDatos() {
         if (cursoId == -1) return
+        
+        val context = this
         binding.progressNotas.visibility = View.VISIBLE
         
         lifecycleScope.launch {
             try {
-                // 1. Cargar alumnos para tener los nombres
                 val resAlumnos = RetrofitClient.instance.getAlumnosPorCurso(cursoId)
                 if (resAlumnos.isSuccessful) {
                     resAlumnos.body()?.forEach { 
@@ -67,7 +65,6 @@ class ModificarNotasActivity : AppCompatActivity() {
                     }
                 }
 
-                // 2. Usar el mismo método que VerNotas (getNotas) para listar todo y filtrar
                 val response = RetrofitClient.instance.getNotas()
                 if (response.isSuccessful && response.body() != null) {
                     val notasDelCurso = response.body()!!.filter { it.id_curso == cursoId }
@@ -78,14 +75,14 @@ class ModificarNotasActivity : AppCompatActivity() {
                     binding.tvDetalleCurso.text = "${notasDelCurso.size} notas encontradas"
                     
                     if (notasDelCurso.isEmpty()) {
-                        Toast.makeText(this@ModificarNotasActivity, "No hay notas para este curso", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "No hay notas para este curso", Toast.LENGTH_SHORT).show()
                     }
                 } else {
-                    Toast.makeText(this@ModificarNotasActivity, "Error al obtener notas del servidor", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Error al obtener notas del servidor", Toast.LENGTH_SHORT).show()
                 }
             } catch (e: Exception) {
                 Log.e("ModificarNotas", "Error de red", e)
-                Toast.makeText(this@ModificarNotasActivity, "Error de conexión", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Error de conexión", Toast.LENGTH_SHORT).show()
             } finally {
                 binding.progressNotas.visibility = View.GONE
             }
@@ -113,17 +110,18 @@ class ModificarNotasActivity : AppCompatActivity() {
     }
 
     private fun actualizarNota(nota: Nota) {
+        val context = this
         lifecycleScope.launch {
             try {
                 val response = RetrofitClient.instance.editarNota(nota)
                 if (response.isSuccessful) {
-                    Toast.makeText(this@ModificarNotasActivity, "Nota actualizada!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Nota actualizada!", Toast.LENGTH_SHORT).show()
                     cargarDatos()
                 } else {
-                    Toast.makeText(this@ModificarNotasActivity, "Error al actualizar en el servidor", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Error al actualizar en el servidor", Toast.LENGTH_SHORT).show()
                 }
             } catch (e: Exception) {
-                Toast.makeText(this@ModificarNotasActivity, "Error de red al actualizar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Error de red al actualizar", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -138,15 +136,16 @@ class ModificarNotasActivity : AppCompatActivity() {
     }
 
     private fun eliminarNota(id: Int) {
+        val context = this
         lifecycleScope.launch {
             try {
                 val res = RetrofitClient.instance.eliminarNota(id)
                 if (res.isSuccessful) {
-                    Toast.makeText(this@ModificarNotasActivity, "Eliminado", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Eliminado", Toast.LENGTH_SHORT).show()
                     cargarDatos()
                 }
             } catch (e: Exception) {
-                Toast.makeText(this@ModificarNotasActivity, "Error al eliminar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Error al eliminar", Toast.LENGTH_SHORT).show()
             }
         }
     }
