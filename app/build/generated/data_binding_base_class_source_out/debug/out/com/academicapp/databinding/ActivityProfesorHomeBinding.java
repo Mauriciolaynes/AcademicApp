@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import androidx.viewpager2.widget.ViewPager2;
 import com.academicapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
@@ -24,13 +24,13 @@ public final class ActivityProfesorHomeBinding implements ViewBinding {
   public final BottomNavigationView bottomNav;
 
   @NonNull
-  public final ViewPager2 viewPager;
+  public final FragmentContainerView navHostFragment;
 
   private ActivityProfesorHomeBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull BottomNavigationView bottomNav, @NonNull ViewPager2 viewPager) {
+      @NonNull BottomNavigationView bottomNav, @NonNull FragmentContainerView navHostFragment) {
     this.rootView = rootView;
     this.bottomNav = bottomNav;
-    this.viewPager = viewPager;
+    this.navHostFragment = navHostFragment;
   }
 
   @Override
@@ -66,13 +66,14 @@ public final class ActivityProfesorHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.viewPager;
-      ViewPager2 viewPager = ViewBindings.findChildViewById(rootView, id);
-      if (viewPager == null) {
+      id = R.id.nav_host_fragment;
+      FragmentContainerView navHostFragment = ViewBindings.findChildViewById(rootView, id);
+      if (navHostFragment == null) {
         break missingId;
       }
 
-      return new ActivityProfesorHomeBinding((CoordinatorLayout) rootView, bottomNav, viewPager);
+      return new ActivityProfesorHomeBinding((CoordinatorLayout) rootView, bottomNav,
+          navHostFragment);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
