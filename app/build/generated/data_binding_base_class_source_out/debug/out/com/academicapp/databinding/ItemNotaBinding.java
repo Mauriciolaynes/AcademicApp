@@ -4,6 +4,7 @@ package com.academicapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +21,9 @@ public final class ItemNotaBinding implements ViewBinding {
   private final MaterialCardView rootView;
 
   @NonNull
+  public final ImageButton btnDeleteNota;
+
+  @NonNull
   public final TextView tvAlumnoNombre;
 
   @NonNull
@@ -29,19 +33,16 @@ public final class ItemNotaBinding implements ViewBinding {
   public final TextView tvDescripcion;
 
   @NonNull
-  public final TextView tvFecha;
-
-  @NonNull
   public final TextView tvNota;
 
-  private ItemNotaBinding(@NonNull MaterialCardView rootView, @NonNull TextView tvAlumnoNombre,
-      @NonNull TextView tvCursoNombre, @NonNull TextView tvDescripcion, @NonNull TextView tvFecha,
-      @NonNull TextView tvNota) {
+  private ItemNotaBinding(@NonNull MaterialCardView rootView, @NonNull ImageButton btnDeleteNota,
+      @NonNull TextView tvAlumnoNombre, @NonNull TextView tvCursoNombre,
+      @NonNull TextView tvDescripcion, @NonNull TextView tvNota) {
     this.rootView = rootView;
+    this.btnDeleteNota = btnDeleteNota;
     this.tvAlumnoNombre = tvAlumnoNombre;
     this.tvCursoNombre = tvCursoNombre;
     this.tvDescripcion = tvDescripcion;
-    this.tvFecha = tvFecha;
     this.tvNota = tvNota;
   }
 
@@ -72,6 +73,12 @@ public final class ItemNotaBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnDeleteNota;
+      ImageButton btnDeleteNota = ViewBindings.findChildViewById(rootView, id);
+      if (btnDeleteNota == null) {
+        break missingId;
+      }
+
       id = R.id.tvAlumnoNombre;
       TextView tvAlumnoNombre = ViewBindings.findChildViewById(rootView, id);
       if (tvAlumnoNombre == null) {
@@ -90,20 +97,14 @@ public final class ItemNotaBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvFecha;
-      TextView tvFecha = ViewBindings.findChildViewById(rootView, id);
-      if (tvFecha == null) {
-        break missingId;
-      }
-
       id = R.id.tvNota;
       TextView tvNota = ViewBindings.findChildViewById(rootView, id);
       if (tvNota == null) {
         break missingId;
       }
 
-      return new ItemNotaBinding((MaterialCardView) rootView, tvAlumnoNombre, tvCursoNombre,
-          tvDescripcion, tvFecha, tvNota);
+      return new ItemNotaBinding((MaterialCardView) rootView, btnDeleteNota, tvAlumnoNombre,
+          tvCursoNombre, tvDescripcion, tvNota);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

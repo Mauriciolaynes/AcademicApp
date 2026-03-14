@@ -11,13 +11,15 @@ class SessionManager(context: Context) {
     companion object {
         const val USER_ID = "user_id"
         const val USER_NAME = "user_name"
+        const val USER_EMAIL = "user_email"
         const val USER_ROLE = "user_role"
     }
 
-    fun guardarSesion(id: Int, nombre: String, rol: Rol) {
+    fun guardarSesion(id: Int, nombre: String, email: String, rol: Rol) {
         val editor = prefs.edit()
         editor.putInt(USER_ID, id)
         editor.putString(USER_NAME, nombre)
+        editor.putString(USER_EMAIL, email)
         editor.putString(USER_ROLE, rol.name)
         editor.apply()
     }
@@ -30,6 +32,10 @@ class SessionManager(context: Context) {
         return prefs.getString(USER_NAME, null)
     }
 
+    fun getEmail(): String? {
+        return prefs.getString(USER_EMAIL, null)
+    }
+
     fun getRol(): Rol {
         val rolName = prefs.getString(USER_ROLE, Rol.ALUMNO.name)
         return Rol.valueOf(rolName ?: Rol.ALUMNO.name)
@@ -39,7 +45,7 @@ class SessionManager(context: Context) {
         return getUserId() != -1
     }
 
-    fun cerrarSesion() {
+    fun clearSession() {
         val editor = prefs.edit()
         editor.clear()
         editor.apply()

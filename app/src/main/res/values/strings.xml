@@ -16,6 +16,7 @@
 
     <!-- Profesor Home -->
     <string name="buenos_dias">Buenos días,</string>
+    <string name="buenos_dias_format">Buenos días, %1$s 👋</string>
     <string name="mis_cursos">Mis Cursos</string>
     <string name="acciones_rapidas">Acciones Rápidas</string>
     <string name="marcar_asistencia">Marcar Asistencia</string>

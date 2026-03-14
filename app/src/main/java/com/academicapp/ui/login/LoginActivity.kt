@@ -18,7 +18,6 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var sessionManager: SessionManager
-    private val rolSeleccionado: Rol = Rol.PROFESOR
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,12 +26,7 @@ class LoginActivity : AppCompatActivity() {
 
         sessionManager = SessionManager(this)
 
-        setupUI()
         setupListeners()
-    }
-
-    private fun setupUI() {
-        binding.tabsRol.visibility = View.GONE
     }
 
     private fun setupListeners() {
@@ -65,7 +59,7 @@ class LoginActivity : AppCompatActivity() {
                     val receivedRolId = usuario.id_rol.trim()
                     
                     if (receivedRolId == "1") {
-                        sessionManager.guardarSesion(usuario.id_usuario, usuario.nombre, Rol.PROFESOR)
+                        sessionManager.guardarSesion(usuario.id_usuario, usuario.nombre, usuario.email, Rol.PROFESOR)
                         navegarAlHome()
                     } else {
                         mostrarError("Esta aplicación es exclusiva para profesores.")

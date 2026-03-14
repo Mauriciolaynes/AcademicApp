@@ -4,6 +4,7 @@ package com.academicapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -22,6 +23,9 @@ import java.lang.String;
 public final class ActivityMarcarAsistenciaBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final ImageButton btnBack;
 
   @NonNull
   public final MaterialButton btnGuardarAsistencia;
@@ -45,11 +49,12 @@ public final class ActivityMarcarAsistenciaBinding implements ViewBinding {
   public final TextView tvListaTitulo;
 
   private ActivityMarcarAsistenciaBinding(@NonNull ConstraintLayout rootView,
-      @NonNull MaterialButton btnGuardarAsistencia, @NonNull LinearLayout layoutHeader,
-      @NonNull ProgressBar progressAsistencia, @NonNull RecyclerView rvAlumnos,
-      @NonNull TextView tvCursoNombre, @NonNull TextView tvDetalleClase,
-      @NonNull TextView tvListaTitulo) {
+      @NonNull ImageButton btnBack, @NonNull MaterialButton btnGuardarAsistencia,
+      @NonNull LinearLayout layoutHeader, @NonNull ProgressBar progressAsistencia,
+      @NonNull RecyclerView rvAlumnos, @NonNull TextView tvCursoNombre,
+      @NonNull TextView tvDetalleClase, @NonNull TextView tvListaTitulo) {
     this.rootView = rootView;
+    this.btnBack = btnBack;
     this.btnGuardarAsistencia = btnGuardarAsistencia;
     this.layoutHeader = layoutHeader;
     this.progressAsistencia = progressAsistencia;
@@ -86,6 +91,12 @@ public final class ActivityMarcarAsistenciaBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnBack;
+      ImageButton btnBack = ViewBindings.findChildViewById(rootView, id);
+      if (btnBack == null) {
+        break missingId;
+      }
+
       id = R.id.btnGuardarAsistencia;
       MaterialButton btnGuardarAsistencia = ViewBindings.findChildViewById(rootView, id);
       if (btnGuardarAsistencia == null) {
@@ -128,9 +139,9 @@ public final class ActivityMarcarAsistenciaBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMarcarAsistenciaBinding((ConstraintLayout) rootView, btnGuardarAsistencia,
-          layoutHeader, progressAsistencia, rvAlumnos, tvCursoNombre, tvDetalleClase,
-          tvListaTitulo);
+      return new ActivityMarcarAsistenciaBinding((ConstraintLayout) rootView, btnBack,
+          btnGuardarAsistencia, layoutHeader, progressAsistencia, rvAlumnos, tvCursoNombre,
+          tvDetalleClase, tvListaTitulo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

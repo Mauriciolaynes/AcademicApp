@@ -29,7 +29,6 @@ class AlumnosAsistenciaAdapter(
         fun bind(asistencia: Asistencia) {
             binding.tvAlumnoNombre.text = asistencia.alumnoNombre
 
-            // Marcar el RadioButton correspondiente sin activar el listener
             when (asistencia.estado) {
                 EstadoAsistencia.PRESENTE -> binding.rbPresente.isChecked = true
                 EstadoAsistencia.TARDANZA -> binding.rbTardanza.isChecked = true

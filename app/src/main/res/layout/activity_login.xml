@@ -80,17 +80,6 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="20dp"/>
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabsRol"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginBottom="20dp"
-                android:contentDescription="@string/txtrol"
-                app:tabBackground="@color/colorInputBg"
-                app:tabIndicatorColor="@color/colorPrimary"
-                app:tabIndicatorFullWidth="true"
-                app:tabMode="fixed" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilUsuario"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"

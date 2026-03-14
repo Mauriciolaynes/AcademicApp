@@ -15,7 +15,6 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.academicapp.R;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
@@ -45,9 +44,6 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final ProgressBar progressLogin;
 
   @NonNull
-  public final TabLayout tabsRol;
-
-  @NonNull
   public final TextInputLayout tilPassword;
 
   @NonNull
@@ -59,9 +55,8 @@ public final class ActivityLoginBinding implements ViewBinding {
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull MaterialButton btnLogin,
       @NonNull CardView cardLogin, @NonNull TextInputEditText etPassword,
       @NonNull TextInputEditText etUsuario, @NonNull LinearLayout layoutHeader,
-      @NonNull ProgressBar progressLogin, @NonNull TabLayout tabsRol,
-      @NonNull TextInputLayout tilPassword, @NonNull TextInputLayout tilUsuario,
-      @NonNull TextView tvError) {
+      @NonNull ProgressBar progressLogin, @NonNull TextInputLayout tilPassword,
+      @NonNull TextInputLayout tilUsuario, @NonNull TextView tvError) {
     this.rootView = rootView;
     this.btnLogin = btnLogin;
     this.cardLogin = cardLogin;
@@ -69,7 +64,6 @@ public final class ActivityLoginBinding implements ViewBinding {
     this.etUsuario = etUsuario;
     this.layoutHeader = layoutHeader;
     this.progressLogin = progressLogin;
-    this.tabsRol = tabsRol;
     this.tilPassword = tilPassword;
     this.tilUsuario = tilUsuario;
     this.tvError = tvError;
@@ -138,12 +132,6 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tabsRol;
-      TabLayout tabsRol = ViewBindings.findChildViewById(rootView, id);
-      if (tabsRol == null) {
-        break missingId;
-      }
-
       id = R.id.tilPassword;
       TextInputLayout tilPassword = ViewBindings.findChildViewById(rootView, id);
       if (tilPassword == null) {
@@ -163,7 +151,7 @@ public final class ActivityLoginBinding implements ViewBinding {
       }
 
       return new ActivityLoginBinding((ConstraintLayout) rootView, btnLogin, cardLogin, etPassword,
-          etUsuario, layoutHeader, progressLogin, tabsRol, tilPassword, tilUsuario, tvError);
+          etUsuario, layoutHeader, progressLogin, tilPassword, tilUsuario, tvError);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

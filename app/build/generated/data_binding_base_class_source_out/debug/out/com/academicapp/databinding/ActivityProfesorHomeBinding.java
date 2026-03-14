@@ -4,16 +4,12 @@ package com.academicapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import androidx.viewpager2.widget.ViewPager2;
 import com.academicapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
@@ -28,67 +24,13 @@ public final class ActivityProfesorHomeBinding implements ViewBinding {
   public final BottomNavigationView bottomNav;
 
   @NonNull
-  public final CardView btnIngresarNotas;
-
-  @NonNull
-  public final CardView btnMarcarAsistencia;
-
-  @NonNull
-  public final CardView btnModificarNotas;
-
-  @NonNull
-  public final CardView btnVerNotas;
-
-  @NonNull
-  public final CardView cardPendientes;
-
-  @NonNull
-  public final LinearLayout layoutHeader;
-
-  @NonNull
-  public final ProgressBar progressHome;
-
-  @NonNull
-  public final RecyclerView rvCursos;
-
-  @NonNull
-  public final TextView tvAvatar;
-
-  @NonNull
-  public final TextView tvCantidadPendientes;
-
-  @NonNull
-  public final TextView tvFecha;
-
-  @NonNull
-  public final TextView tvNombreProfesor;
-
-  @NonNull
-  public final TextView tvVerCursos;
+  public final ViewPager2 viewPager;
 
   private ActivityProfesorHomeBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull BottomNavigationView bottomNav, @NonNull CardView btnIngresarNotas,
-      @NonNull CardView btnMarcarAsistencia, @NonNull CardView btnModificarNotas,
-      @NonNull CardView btnVerNotas, @NonNull CardView cardPendientes,
-      @NonNull LinearLayout layoutHeader, @NonNull ProgressBar progressHome,
-      @NonNull RecyclerView rvCursos, @NonNull TextView tvAvatar,
-      @NonNull TextView tvCantidadPendientes, @NonNull TextView tvFecha,
-      @NonNull TextView tvNombreProfesor, @NonNull TextView tvVerCursos) {
+      @NonNull BottomNavigationView bottomNav, @NonNull ViewPager2 viewPager) {
     this.rootView = rootView;
     this.bottomNav = bottomNav;
-    this.btnIngresarNotas = btnIngresarNotas;
-    this.btnMarcarAsistencia = btnMarcarAsistencia;
-    this.btnModificarNotas = btnModificarNotas;
-    this.btnVerNotas = btnVerNotas;
-    this.cardPendientes = cardPendientes;
-    this.layoutHeader = layoutHeader;
-    this.progressHome = progressHome;
-    this.rvCursos = rvCursos;
-    this.tvAvatar = tvAvatar;
-    this.tvCantidadPendientes = tvCantidadPendientes;
-    this.tvFecha = tvFecha;
-    this.tvNombreProfesor = tvNombreProfesor;
-    this.tvVerCursos = tvVerCursos;
+    this.viewPager = viewPager;
   }
 
   @Override
@@ -124,88 +66,13 @@ public final class ActivityProfesorHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnIngresarNotas;
-      CardView btnIngresarNotas = ViewBindings.findChildViewById(rootView, id);
-      if (btnIngresarNotas == null) {
+      id = R.id.viewPager;
+      ViewPager2 viewPager = ViewBindings.findChildViewById(rootView, id);
+      if (viewPager == null) {
         break missingId;
       }
 
-      id = R.id.btnMarcarAsistencia;
-      CardView btnMarcarAsistencia = ViewBindings.findChildViewById(rootView, id);
-      if (btnMarcarAsistencia == null) {
-        break missingId;
-      }
-
-      id = R.id.btnModificarNotas;
-      CardView btnModificarNotas = ViewBindings.findChildViewById(rootView, id);
-      if (btnModificarNotas == null) {
-        break missingId;
-      }
-
-      id = R.id.btnVerNotas;
-      CardView btnVerNotas = ViewBindings.findChildViewById(rootView, id);
-      if (btnVerNotas == null) {
-        break missingId;
-      }
-
-      id = R.id.cardPendientes;
-      CardView cardPendientes = ViewBindings.findChildViewById(rootView, id);
-      if (cardPendientes == null) {
-        break missingId;
-      }
-
-      id = R.id.layoutHeader;
-      LinearLayout layoutHeader = ViewBindings.findChildViewById(rootView, id);
-      if (layoutHeader == null) {
-        break missingId;
-      }
-
-      id = R.id.progressHome;
-      ProgressBar progressHome = ViewBindings.findChildViewById(rootView, id);
-      if (progressHome == null) {
-        break missingId;
-      }
-
-      id = R.id.rvCursos;
-      RecyclerView rvCursos = ViewBindings.findChildViewById(rootView, id);
-      if (rvCursos == null) {
-        break missingId;
-      }
-
-      id = R.id.tvAvatar;
-      TextView tvAvatar = ViewBindings.findChildViewById(rootView, id);
-      if (tvAvatar == null) {
-        break missingId;
-      }
-
-      id = R.id.tvCantidadPendientes;
-      TextView tvCantidadPendientes = ViewBindings.findChildViewById(rootView, id);
-      if (tvCantidadPendientes == null) {
-        break missingId;
-      }
-
-      id = R.id.tvFecha;
-      TextView tvFecha = ViewBindings.findChildViewById(rootView, id);
-      if (tvFecha == null) {
-        break missingId;
-      }
-
-      id = R.id.tvNombreProfesor;
-      TextView tvNombreProfesor = ViewBindings.findChildViewById(rootView, id);
-      if (tvNombreProfesor == null) {
-        break missingId;
-      }
-
-      id = R.id.tvVerCursos;
-      TextView tvVerCursos = ViewBindings.findChildViewById(rootView, id);
-      if (tvVerCursos == null) {
-        break missingId;
-      }
-
-      return new ActivityProfesorHomeBinding((CoordinatorLayout) rootView, bottomNav,
-          btnIngresarNotas, btnMarcarAsistencia, btnModificarNotas, btnVerNotas, cardPendientes,
-          layoutHeader, progressHome, rvCursos, tvAvatar, tvCantidadPendientes, tvFecha,
-          tvNombreProfesor, tvVerCursos);
+      return new ActivityProfesorHomeBinding((CoordinatorLayout) rootView, bottomNav, viewPager);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

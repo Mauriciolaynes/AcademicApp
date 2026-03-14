@@ -1,19 +1,25 @@
 package com.academicapp.ui.profesor.notas
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
+import android.util.Log
+import android.view.View
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.academicapp.data.model.Nota
 import com.academicapp.databinding.ActivityVerNotasProfesorBinding
+import com.academicapp.network.RetrofitClient
+import com.academicapp.network.model.Nota
+import kotlinx.coroutines.launch
 
 class VerNotasProfesorActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityVerNotasProfesorBinding
     private lateinit var notasAdapter: NotasAdapter
     private var cursoId: Int = -1
-    private lateinit var cursoNombre: String
+    private var alumnosMap = mutableMapOf<Int, String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,21 +27,21 @@ class VerNotasProfesorActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         cursoId = intent.getIntExtra("curso_id", -1)
-        cursoNombre = intent.getStringExtra("curso_nombre") ?: "Notas del Curso"
+        val cursoNombre = intent.getStringExtra("curso_nombre") ?: "Notas"
+        binding.tvCursoNombre.text = cursoNombre
 
-        setupUI()
         setupRecyclerView()
         setupSwipeToRefresh()
-        cargarNotas()
-        setupListeners()
-    }
-
-    private fun setupUI() {
-        binding.tvCursoNombre.text = cursoNombre
+        cargarDatos()
+        
+        binding.btnBack.setOnClickListener { finish() }
     }
 
     private fun setupRecyclerView() {
-        notasAdapter = NotasAdapter()
+        notasAdapter = NotasAdapter(
+            onEdit = { nota -> showEditDialog(nota) },
+            onDelete = { nota -> confirmarEliminacion(nota) }
+        )
         binding.rvNotas.apply {
             layoutManager = LinearLayoutManager(this@VerNotasProfesorActivity)
             adapter = notasAdapter
@@ -43,40 +49,96 @@ class VerNotasProfesorActivity : AppCompatActivity() {
     }
 
     private fun setupSwipeToRefresh() {
-        binding.swipeRefreshLayout.setOnRefreshListener {
-            cargarNotas()
+        binding.swipeRefreshLayout.setOnRefreshListener { cargarDatos() }
+    }
+
+    private fun cargarDatos() {
+        binding.swipeRefreshLayout.isRefreshing = true
+        lifecycleScope.launch {
+            try {
+                // 1. Cargamos alumnos para los nombres
+                val resAlu = RetrofitClient.instance.getAlumnosPorCurso(cursoId)
+                if (resAlu.isSuccessful) resAlu.body()?.forEach { alumnosMap[it.id_usuario] = it.nombre }
+
+                // 2. Cargamos TODAS las notas del servidor usando el nuevo método GET /notas
+                val response = RetrofitClient.instance.getNotas()
+                if (response.isSuccessful && response.body() != null) {
+                    // 3. Filtramos por cursoId para mostrar solo las de este curso
+                    val notasDelCurso = response.body()!!.filter { it.id_curso == cursoId }
+                    
+                    notasAdapter.setAlumnosMap(alumnosMap)
+                    notasAdapter.submitList(notasDelCurso)
+                    
+                    if (notasDelCurso.isEmpty()) {
+                        Toast.makeText(this@VerNotasProfesorActivity, "No hay notas para este curso", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    Log.e("VerNotas", "Error: ${response.code()}")
+                    Toast.makeText(this@VerNotasProfesorActivity, "Error al cargar datos del servidor", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: Exception) {
+                Log.e("VerNotas", "Error de red", e)
+                Toast.makeText(this@VerNotasProfesorActivity, "Sin conexión al servidor", Toast.LENGTH_SHORT).show()
+            } finally {
+                binding.swipeRefreshLayout.isRefreshing = false
+            }
         }
     }
 
-    private fun cargarNotas() {
-        binding.swipeRefreshLayout.isRefreshing = true
-        // Simulando carga de datos
-        Handler(Looper.getMainLooper()).postDelayed({
-            // TODO: Cargar notas reales desde la BD/API para el cursoId
-            val allNotasMock = listOf(
-                // Notas para Matematicas (cursoId = 1)
-                Nota(1, 1, "Suarez, Michael", 1, "Matemáticas", "Examen Parcial", 15.5f, "20/04/2024", 1),
-                Nota(2, 2, "Casemiro, Jose", 1, "Matemáticas", "Examen Parcial", 18.0f, "20/04/2024", 1),
-                Nota(3, 3, "Alba, Jordi", 1, "Matemáticas", "Examen Parcial", 12.0f, "20/04/2024", 1),
-                Nota(4, 1, "Suarez, Michael", 1, "Matemáticas", "Práctica Calificada 1", 14.0f, "10/04/2024", 1),
+    private fun showEditDialog(nota: Nota) {
+        val dialogView = layoutInflater.inflate(com.academicapp.R.layout.dialog_edit_nota, null)
+        val etCal = dialogView.findViewById<EditText>(com.academicapp.R.id.etCalificacion)
+        val etUni = dialogView.findViewById<EditText>(com.academicapp.R.id.etUnidad)
 
-                // Notas para Ciencias (cursoId = 2)
-                Nota(5, 4, "Ramos, Sergio", 2, "Ciencias", "Laboratorio 1", 17.0f, "22/04/2024", 1),
-                Nota(6, 5, "Pique, Gerard", 2, "Ciencias", "Laboratorio 1", 16.0f, "22/04/2024", 1),
+        etCal.setText(nota.calificacion.toString())
+        etUni.setText(nota.unidad)
 
-                // Notas para Historia (cursoId = 3)
-                Nota(7, 6, "Busquets, Sergio", 3, "Historia", "Exposición", 19.0f, "25/04/2024", 1),
-                Nota(8, 7, "Iniesta, Andres", 3, "Historia", "Exposición", 20.0f, "25/04/2024", 1)
-            )
-            val notasDelCurso = allNotasMock.filter { it.cursoId == cursoId }
-            notasAdapter.submitList(notasDelCurso)
-            binding.swipeRefreshLayout.isRefreshing = false
-        }, 1000)
+        AlertDialog.Builder(this)
+            .setTitle("Modificar Nota")
+            .setView(dialogView)
+            .setPositiveButton("Actualizar") { _, _ ->
+                val nCal = etCal.text.toString().toFloatOrNull() ?: nota.calificacion
+                val nUni = etUni.text.toString()
+                actualizarNota(nota.copy(calificacion = nCal, unidad = nUni))
+            }
+            .setNegativeButton("Cancelar", null)
+            .show()
     }
 
-    private fun setupListeners() {
-        binding.btnBack.setOnClickListener {
-            finish()
+    private fun actualizarNota(nota: Nota) {
+        lifecycleScope.launch {
+            try {
+                val res = RetrofitClient.instance.editarNota(nota)
+                if (res.isSuccessful) {
+                    Toast.makeText(this@VerNotasProfesorActivity, "Actualizado correctamente", Toast.LENGTH_SHORT).show()
+                    cargarDatos()
+                }
+            } catch (e: Exception) {
+                Toast.makeText(this@VerNotasProfesorActivity, "Error al actualizar", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun confirmarEliminacion(nota: Nota) {
+        AlertDialog.Builder(this)
+            .setTitle("Eliminar Nota")
+            .setMessage("¿Deseas eliminar esta nota permanentemente?")
+            .setPositiveButton("Eliminar") { _, _ -> eliminarNota(nota.id_nota) }
+            .setNegativeButton("Cancelar", null)
+            .show()
+    }
+
+    private fun eliminarNota(id: Int) {
+        lifecycleScope.launch {
+            try {
+                val res = RetrofitClient.instance.eliminarNota(id)
+                if (res.isSuccessful) {
+                    Toast.makeText(this@VerNotasProfesorActivity, "Nota eliminada", Toast.LENGTH_SHORT).show()
+                    cargarDatos()
+                }
+            } catch (e: Exception) {
+                Toast.makeText(this@VerNotasProfesorActivity, "Error al eliminar", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
