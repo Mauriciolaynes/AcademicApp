@@ -1,6 +1,7 @@
 package com.academicapp.ui.profesor.notas
 
 import android.os.Bundle
+import android.text.InputFilter
 import android.util.Log
 import android.view.View
 import android.widget.EditText
@@ -13,6 +14,7 @@ import com.academicapp.databinding.ActivityModificarNotasBinding
 import com.academicapp.network.RetrofitClient
 import com.academicapp.network.model.Nota
 import kotlinx.coroutines.launch
+import java.util.Locale
 
 class ModificarNotasActivity : AppCompatActivity() {
 
@@ -94,14 +96,37 @@ class ModificarNotasActivity : AppCompatActivity() {
         val etCalificacion = dialogView.findViewById<EditText>(com.academicapp.R.id.etCalificacion)
         val etUnidad = dialogView.findViewById<EditText>(com.academicapp.R.id.etUnidad)
 
-        etCalificacion.setText(nota.calificacion.toString())
+        // Filtro estricto: 0.0 - 20.0 y máximo 1 decimal
+        val filter = InputFilter { source, start, end, dest, dstart, dend ->
+            val nuevoTexto = dest.subSequence(0, dstart).toString() + 
+                             source.subSequence(start, end) + 
+                             dest.subSequence(dend, dest.length)
+            
+            if (nuevoTexto.isEmpty()) return@InputFilter null
+            
+            // Regex: Máximo 2 dígitos enteros, punto opcional y máximo 1 decimal
+            if (!nuevoTexto.matches(Regex("^\\d{0,2}(\\.\\d{0,1})?$"))) return@InputFilter ""
+            
+            // Rango numérico
+            val valor = nuevoTexto.toDoubleOrNull() ?: return@InputFilter ""
+            if (valor > 20.0) return@InputFilter ""
+            
+            null
+        }
+
+        etCalificacion.filters = arrayOf(filter)
+        
+        // Ajustar valor inicial si es inválido (ej. 21.0) y formatear a 1 decimal
+        val valorSeguro = if (nota.calificacion > 20f) 20.0f else nota.calificacion
+        etCalificacion.setText(String.format(Locale.US, "%.1f", valorSeguro))
+        
         etUnidad.setText(nota.unidad)
 
         AlertDialog.Builder(this)
             .setTitle("Modificar Nota de ${alumnosMap[nota.id_alumno] ?: "Alumno"}")
             .setView(dialogView)
             .setPositiveButton("Guardar Cambios") { _, _ ->
-                val nuevaCal = etCalificacion.text.toString().toFloatOrNull() ?: nota.calificacion
+                val nuevaCal = etCalificacion.text.toString().toFloatOrNull() ?: valorSeguro
                 val nuevaUni = etUnidad.text.toString().ifBlank { nota.unidad }
                 actualizarNota(nota.copy(calificacion = nuevaCal, unidad = nuevaUni))
             }

@@ -174,7 +174,7 @@ class InicioFragment : Fragment() {
                                 icono = obtenerIconoPorNombre(cursoNet.nombre),
                                 gradoNombre = "Grado",
                                 profesorId = cursoNet.profesorId,
-                                    cantAlumnos = cantAlumnos
+                                cantAlumnos = cantAlumnos
                             )
                         }
                     }.awaitAll()

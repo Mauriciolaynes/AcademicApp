@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.academicapp-mergeDebugResources-54:/values-w400dp-port-v13/values-w400dp-port-v13.xml",
+            "outputFile": "com.academicapp-mergeDebugResources-50:/values-w400dp-port-v13/values-w400dp-port-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mauri\\.gradle\\caches\\transforms-3\\f9a9e7dabb2e10941cdaf61db9bb3907\\transformed\\material-1.11.0\\res\\values-w400dp-port-v13\\values-w400dp-port-v13.xml",

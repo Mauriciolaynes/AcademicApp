@@ -40,10 +40,10 @@ data class Asistencia(
     val alumnoNombre: String = "",
     val cursoId: Int = 0,
     val fecha: String = "",
-    var estado: EstadoAsistencia = EstadoAsistencia.AUSENTE
+    var estado: EstadoAsistencia = EstadoAsistencia.SIN_MARCAR
 )
 
-enum class EstadoAsistencia { PRESENTE, AUSENTE, JUSTIFICADO, TARDANZA }
+enum class EstadoAsistencia { PRESENTE, AUSENTE, TARDANZA, SIN_MARCAR }
 
 data class Nota(
     val id: Int = 0,

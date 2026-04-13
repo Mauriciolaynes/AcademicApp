@@ -29,11 +29,16 @@ class AlumnosAsistenciaAdapter(
         fun bind(asistencia: Asistencia) {
             binding.tvAlumnoNombre.text = asistencia.alumnoNombre
 
+            binding.rgAsistencia.setOnCheckedChangeListener(null)
+
+            binding.rgAsistencia.clearCheck()
+
             when (asistencia.estado) {
                 EstadoAsistencia.PRESENTE -> binding.rbPresente.isChecked = true
                 EstadoAsistencia.TARDANZA -> binding.rbTardanza.isChecked = true
                 EstadoAsistencia.AUSENTE -> binding.rbFalta.isChecked = true
-                else -> {}
+                EstadoAsistencia.SIN_MARCAR -> {
+                }
             }
 
             binding.rgAsistencia.setOnCheckedChangeListener { _, checkedId ->
@@ -43,6 +48,7 @@ class AlumnosAsistenciaAdapter(
                     binding.rbFalta.id -> EstadoAsistencia.AUSENTE
                     else -> asistencia.estado
                 }
+                
                 if (asistencia.estado != nuevoEstado) {
                     asistencia.estado = nuevoEstado
                     onAsistenciaChanged(asistencia)
@@ -53,7 +59,7 @@ class AlumnosAsistenciaAdapter(
 
     class DiffCallback : DiffUtil.ItemCallback<Asistencia>() {
         override fun areItemsTheSame(oldItem: Asistencia, newItem: Asistencia): Boolean {
-            return oldItem.id == newItem.id
+            return oldItem.alumnoId == newItem.alumnoId
         }
 
         override fun areContentsTheSame(oldItem: Asistencia, newItem: Asistencia): Boolean {

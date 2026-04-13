@@ -51,7 +51,6 @@ class ListaCursosFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         sessionManager = SessionManager(requireContext())
         
-        // Soporte para Navigation Component y newInstance tradicional
         tipo = arguments?.getString("tipo") ?: "asistencia"
 
         setupUI()

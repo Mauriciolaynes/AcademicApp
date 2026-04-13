@@ -1,6 +1,7 @@
 package com.academicapp.ui.profesor.notas
 
 import android.text.Editable
+import android.text.InputFilter
 import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -33,9 +34,30 @@ class AlumnosNotasAdapter : ListAdapter<AlumnoNotaUI, AlumnosNotasAdapter.ViewHo
             binding.tvAlumnoNombre.text = item.nombre
             
             textWatcher?.let { binding.etNota.removeTextChangedListener(it) }
+
+            // Filtro robusto: Rango 0.0 - 20.0 y máximo 1 decimal
+            val filter = InputFilter { source, _, _, dest, dstart, dend ->
+                val nuevoTexto = dest.subSequence(0, dstart).toString() + source + dest.subSequence(dend, dest.length)
+                
+                if (nuevoTexto.isEmpty()) return@InputFilter null
+                
+                // Regex: Máximo 2 dígitos antes del punto y máximo 1 después
+                if (!nuevoTexto.matches(Regex("^\\d{0,2}(\\.\\d{0,1})?$"))) {
+                    return@InputFilter ""
+                }
+                
+                // Rango numérico
+                val valor = nuevoTexto.toDoubleOrNull()
+                if (valor != null && valor > 20.0) {
+                    return@InputFilter ""
+                }
+                
+                null
+            }
             
+            binding.etNota.filters = arrayOf(filter)
             binding.etNota.setText(item.nota)
-            
+
             textWatcher = object : TextWatcher {
                 override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
                 override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}

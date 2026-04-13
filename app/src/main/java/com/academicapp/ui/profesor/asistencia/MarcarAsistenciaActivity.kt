@@ -75,10 +75,11 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
                                 when {
                                     body.observacion == "TARDANZA" -> EstadoAsistencia.TARDANZA
                                     body.asistio -> EstadoAsistencia.PRESENTE
-                                    else -> EstadoAsistencia.AUSENTE
+                                    body.observacion == "AUSENTE" -> EstadoAsistencia.AUSENTE
+                                    else -> EstadoAsistencia.SIN_MARCAR
                                 }
                             } else {
-                                EstadoAsistencia.PRESENTE
+                                EstadoAsistencia.SIN_MARCAR
                             }
 
                             Asistencia(
@@ -109,8 +110,12 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
     }
 
     private fun guardarCambiosUnoPorUno() {
-        val listaAsistencia = alumnosAdapter.currentList
-        if (listaAsistencia.isEmpty()) return
+        val listaAsistencia = alumnosAdapter.currentList.filter { it.estado != EstadoAsistencia.SIN_MARCAR }
+        
+        if (listaAsistencia.isEmpty()) {
+            Toast.makeText(this, "Por favor, marca la asistencia de al menos un alumno", Toast.LENGTH_SHORT).show()
+            return
+        }
 
         val context = this
         binding.progressAsistencia.visibility = View.VISIBLE

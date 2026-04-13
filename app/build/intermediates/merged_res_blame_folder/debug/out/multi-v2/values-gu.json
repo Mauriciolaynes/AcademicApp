@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.academicapp-mergeDebugResources-54:/values-gu/values-gu.xml",
+            "outputFile": "com.academicapp-mergeDebugResources-50:/values-gu/values-gu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\mauri\\.gradle\\caches\\transforms-3\\88e34bdf4456fda3f546daabbcf3b977\\transformed\\core-1.12.0\\res\\values-gu\\values-gu.xml",

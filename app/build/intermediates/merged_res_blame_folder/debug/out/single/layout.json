@@ -1,90 +1,78 @@
 [
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\item_curso_profesor.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\item_curso_profesor.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/layout_bottom_sheet_cursos.xml",
+        "source": "com.academicapp-main-54:/layout/layout_bottom_sheet_cursos.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\fragment_lista_cursos.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\fragment_lista_cursos.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/item_curso_profesor.xml",
+        "source": "com.academicapp-main-54:/layout/item_curso_profesor.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\activity_login.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/dialog_edit_nota.xml",
+        "source": "com.academicapp-main-54:/layout/dialog_edit_nota.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\item_alumno_nota.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\item_alumno_nota.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/item_justificacion.xml",
+        "source": "com.academicapp-main-54:/layout/item_justificacion.xml"
     },
     {
-        "merged": "com.academicapp-mergeDebugResources-55:/layout/item_justificacion.xml",
-        "source": "com.academicapp-main-58:/layout/item_justificacion.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/activity_login.xml",
+        "source": "com.academicapp-main-54:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\item_alumno_asistencia.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\item_alumno_asistencia.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/activity_gestion_justificacion.xml",
+        "source": "com.academicapp-main-54:/layout/activity_gestion_justificacion.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\activity_profesor_home.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\activity_profesor_home.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/item_curso.xml",
+        "source": "com.academicapp-main-54:/layout/item_curso.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\item_nota.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\item_nota.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/activity_seleccionar_curso_nota.xml",
+        "source": "com.academicapp-main-54:/layout/activity_seleccionar_curso_nota.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\activity_alumno_home.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\activity_alumno_home.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/activity_ver_notas_profesor.xml",
+        "source": "com.academicapp-main-54:/layout/activity_ver_notas_profesor.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\fragment_placeholder.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\fragment_placeholder.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/item_alumno_nota.xml",
+        "source": "com.academicapp-main-54:/layout/item_alumno_nota.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\fragment_inicio.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\fragment_inicio.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/fragment_inicio.xml",
+        "source": "com.academicapp-main-54:/layout/fragment_inicio.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\dialog_edit_nota.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\dialog_edit_nota.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/fragment_perfil.xml",
+        "source": "com.academicapp-main-54:/layout/fragment_perfil.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\fragment_perfil.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\fragment_perfil.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/activity_ingresar_notas.xml",
+        "source": "com.academicapp-main-54:/layout/activity_ingresar_notas.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\item_curso.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\item_curso.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/activity_profesor_home.xml",
+        "source": "com.academicapp-main-54:/layout/activity_profesor_home.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\activity_ingresar_notas.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\activity_ingresar_notas.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/item_nota.xml",
+        "source": "com.academicapp-main-54:/layout/item_nota.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\activity_ver_notas_profesor.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\activity_ver_notas_profesor.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/activity_marcar_asistencia.xml",
+        "source": "com.academicapp-main-54:/layout/activity_marcar_asistencia.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\activity_seleccionar_curso_nota.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\activity_seleccionar_curso_nota.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/item_alumno_asistencia.xml",
+        "source": "com.academicapp-main-54:/layout/item_alumno_asistencia.xml"
     },
     {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\activity_modificar_notas.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\activity_modificar_notas.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/fragment_lista_cursos.xml",
+        "source": "com.academicapp-main-54:/layout/fragment_lista_cursos.xml"
     },
     {
-        "merged": "com.academicapp-mergeDebugResources-55:/layout/activity_gestion_justificacion.xml",
-        "source": "com.academicapp-main-58:/layout/activity_gestion_justificacion.xml"
-    },
-    {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\item_nota_alumno.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\item_nota_alumno.xml"
-    },
-    {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\layout_bottom_sheet_cursos.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\layout_bottom_sheet_cursos.xml"
-    },
-    {
-        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-mergeDebugResources-55:\\layout\\activity_marcar_asistencia.xml",
-        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-58:\\layout\\activity_marcar_asistencia.xml"
+        "merged": "com.academicapp-mergeDebugResources-51:/layout/activity_modificar_notas.xml",
+        "source": "com.academicapp-main-54:/layout/activity_modificar_notas.xml"
     }
 ]
