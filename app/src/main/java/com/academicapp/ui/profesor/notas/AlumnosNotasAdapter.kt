@@ -35,18 +35,15 @@ class AlumnosNotasAdapter : ListAdapter<AlumnoNotaUI, AlumnosNotasAdapter.ViewHo
             
             textWatcher?.let { binding.etNota.removeTextChangedListener(it) }
 
-            // Filtro robusto: Rango 0.0 - 20.0 y máximo 1 decimal
             val filter = InputFilter { source, _, _, dest, dstart, dend ->
                 val nuevoTexto = dest.subSequence(0, dstart).toString() + source + dest.subSequence(dend, dest.length)
                 
                 if (nuevoTexto.isEmpty()) return@InputFilter null
                 
-                // Regex: Máximo 2 dígitos antes del punto y máximo 1 después
                 if (!nuevoTexto.matches(Regex("^\\d{0,2}(\\.\\d{0,1})?$"))) {
                     return@InputFilter ""
                 }
                 
-                // Rango numérico
                 val valor = nuevoTexto.toDoubleOrNull()
                 if (valor != null && valor > 20.0) {
                     return@InputFilter ""

@@ -1,198 +1,202 @@
 [
     {
-        "merged": "com.academicapp-merged_res-52:/layout_activity_login.xml.flat",
-        "source": "com.academicapp-main-54:/layout/activity_login.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/layout_activity_modificar_notas.xml.flat",
-        "source": "com.academicapp-main-54:/layout/activity_modificar_notas.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_bg_avatar.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/bg_avatar.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_fragment_lista_cursos.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\fragment_lista_cursos.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_bg_bottom_sheet.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/bg_bottom_sheet.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_layout_bottom_sheet_cursos.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\layout_bottom_sheet_cursos.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.academicapp-main-54:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_bg_badge_green.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/bg_badge_green.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_item_justificacion.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\item_justificacion.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.academicapp-main-54:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_bg_edittext_nota.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\bg_edittext_nota.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/layout_item_alumno_asistencia.xml.flat",
-        "source": "com.academicapp-main-54:/layout/item_alumno_asistencia.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_bg_chip.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/bg_chip.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_item_alumno_asistencia.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\item_alumno_asistencia.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_bg_edittext_nota.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/bg_edittext_nota.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\menu_menu_profesor.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\menu\\menu_profesor.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_selector_asistencia_t.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/selector_asistencia_t.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_item_curso.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\item_curso.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.academicapp-main-54:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_bg_btn_dark.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\bg_btn_dark.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.academicapp-main-54:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.academicapp-main-54:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_activity_marcar_asistencia.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\activity_marcar_asistencia.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_bg_stat_card.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/bg_stat_card.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_fragment_perfil.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\fragment_perfil.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/layout_dialog_edit_nota.xml.flat",
-        "source": "com.academicapp-main-54:/layout/dialog_edit_nota.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_selector_asistencia_p.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\selector_asistencia_p.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.academicapp-main-54:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_fragment_inicio.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\fragment_inicio.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/layout_layout_bottom_sheet_cursos.xml.flat",
-        "source": "com.academicapp-main-54:/layout/layout_bottom_sheet_cursos.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_bg_badge_green.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\bg_badge_green.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_bg_btn_dark.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/bg_btn_dark.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_item_curso_profesor.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\item_curso_profesor.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.academicapp-pngs-48:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_ic_back.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\ic_back.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/menu_menu_profesor.xml.flat",
-        "source": "com.academicapp-main-54:/menu/menu_profesor.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_activity_ingresar_notas.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\activity_ingresar_notas.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/layout_activity_seleccionar_curso_nota.xml.flat",
-        "source": "com.academicapp-main-54:/layout/activity_seleccionar_curso_nota.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_item_alumno_nota.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\item_alumno_nota.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_ic_arrow_forward.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/ic_arrow_forward.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/layout_fragment_lista_cursos.xml.flat",
-        "source": "com.academicapp-main-54:/layout/fragment_lista_cursos.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_bg_bottom_sheet.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\bg_bottom_sheet.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_bg_icon_purple.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/bg_icon_purple.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_bg_icon_purple.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\bg_icon_purple.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.academicapp-main-54:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_activity_modificar_notas.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\activity_modificar_notas.xml"
+    },
+    {
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_activity_profesor_home.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\activity_profesor_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_activity_seleccionar_curso_nota.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\activity_seleccionar_curso_nota.xml"
+    },
+    {
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_selector_asistencia_f.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\selector_asistencia_f.xml"
+    },
+    {
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_bg_avatar.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\bg_avatar.xml"
+    },
+    {
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_selector_asistencia_t.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\selector_asistencia_t.xml"
     },
     {
         "merged": "com.academicapp-merged_res-52:/layout_activity_marcar_asistencia.xml.flat",
         "source": "com.academicapp-main-54:/layout/activity_marcar_asistencia.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.academicapp-main-54:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_ic_arrow_forward.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\ic_arrow_forward.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/layout_fragment_perfil.xml.flat",
-        "source": "com.academicapp-main-54:/layout/fragment_perfil.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_ic_back.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/ic_back.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/layout_activity_gestion_justificacion.xml.flat",
-        "source": "com.academicapp-main-54:/layout/activity_gestion_justificacion.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_bg_chip.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\bg_chip.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_bg_badge_warning.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/bg_badge_warning.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_bg_badge_warning.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\bg_badge_warning.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/layout_activity_profesor_home.xml.flat",
-        "source": "com.academicapp-main-54:/layout/activity_profesor_home.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/navigation_nav_graph.xml.flat",
-        "source": "com.academicapp-main-54:/navigation/nav_graph.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.academicapp-main-54:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable_bg_stat_card.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\drawable\\bg_stat_card.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/layout_item_nota.xml.flat",
-        "source": "com.academicapp-main-54:/layout/item_nota.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_item_nota.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\item_nota.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/layout_fragment_inicio.xml.flat",
-        "source": "com.academicapp-main-54:/layout/fragment_inicio.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/drawable_selector_asistencia_f.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/selector_asistencia_f.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_dialog_edit_nota.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\dialog_edit_nota.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.academicapp-main-54:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/layout_item_alumno_nota.xml.flat",
-        "source": "com.academicapp-main-54:/layout/item_alumno_nota.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_activity_ver_notas_profesor.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\activity_ver_notas_profesor.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/layout_item_curso.xml.flat",
-        "source": "com.academicapp-main-54:/layout/item_curso.xml"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\layout_activity_gestion_justificacion.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-main-54:\\layout\\activity_gestion_justificacion.xml"
     },
     {
-        "merged": "com.academicapp-merged_res-52:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.academicapp-main-54:/mipmap-hdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "com.academicapp-merged_res-52:/layout_activity_ver_notas_profesor.xml.flat",
-        "source": "com.academicapp-main-54:/layout/activity_ver_notas_profesor.xml"
-    },
-    {
-        "merged": "com.academicapp-merged_res-52:/layout_item_justificacion.xml.flat",
-        "source": "com.academicapp-main-54:/layout/item_justificacion.xml"
-    },
-    {
-        "merged": "com.academicapp-merged_res-52:/drawable_selector_asistencia_p.xml.flat",
-        "source": "com.academicapp-main-54:/drawable/selector_asistencia_p.xml"
-    },
-    {
-        "merged": "com.academicapp-merged_res-52:/layout_item_curso_profesor.xml.flat",
-        "source": "com.academicapp-main-54:/layout/item_curso_profesor.xml"
-    },
-    {
-        "merged": "com.academicapp-merged_res-52:/layout_activity_ingresar_notas.xml.flat",
-        "source": "com.academicapp-main-54:/layout/activity_ingresar_notas.xml"
-    },
-    {
-        "merged": "com.academicapp-merged_res-52:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.academicapp-main-54:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-merged_res-52:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\mauri\\.gradle\\daemon\\8.2\\com.academicapp-pngs-48:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     }
 ]

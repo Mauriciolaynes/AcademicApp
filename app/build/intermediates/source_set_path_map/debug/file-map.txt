@@ -46,10 +46,10 @@ com.academicapp-constraintlayout-2.1.4-44 C:\Users\mauri\.gradle\caches\transfor
 com.academicapp-savedstate-1.2.1-45 C:\Users\mauri\.gradle\caches\transforms-3\ecdc495677017548c89e18dcdc4e9277\transformed\savedstate-1.2.1\res
 com.academicapp-emoji2-1.2.0-46 C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\res
 com.academicapp-material-1.11.0-47 C:\Users\mauri\.gradle\caches\transforms-3\f9a9e7dabb2e10941cdaf61db9bb3907\transformed\material-1.11.0\res
-com.academicapp-pngs-48 C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\build\generated\res\pngs\debug
-com.academicapp-resValues-49 C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\build\generated\res\resValues\debug
-com.academicapp-mergeDebugResources-50 C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
-com.academicapp-mergeDebugResources-51 C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
-com.academicapp-merged_res-52 C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\build\intermediates\merged_res\debug
-com.academicapp-debug-53 C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\debug\res
-com.academicapp-main-54 C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\res
+com.academicapp-pngs-48 C:\mb\AcademicApp\app\build\generated\res\pngs\debug
+com.academicapp-resValues-49 C:\mb\AcademicApp\app\build\generated\res\resValues\debug
+com.academicapp-mergeDebugResources-50 C:\mb\AcademicApp\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.academicapp-mergeDebugResources-51 C:\mb\AcademicApp\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.academicapp-merged_res-52 C:\mb\AcademicApp\app\build\intermediates\merged_res\debug
+com.academicapp-debug-53 C:\mb\AcademicApp\app\src\debug\res
+com.academicapp-main-54 C:\mb\AcademicApp\app\src\main\res

@@ -20,14 +20,14 @@ interface ApiService {
     @GET("cursos/profesor/{id}")
     suspend fun getCursosPorProfesor(@Path("id") profesorId: Int): Response<List<Curso>>
 
-    @GET("asistencias/curso/{id}")
-    suspend fun getAsistenciaPorCurso(@Path("id") cursoId: Int, @Query("fecha") fecha: String): Response<List<Asistencia>>
-
     @GET("asistencias/{cursoId}/{alumnoId}")
     suspend fun visualizarAsistencia(@Path("cursoId") cursoId: Int, @Path("alumnoId") alumnoId: Int): Response<Asistencia>
 
-    @POST("asistencias/bulk")
-    suspend fun registrarAsistenciaMasiva(@Body asistencias: List<Asistencia>): Response<Unit>
+    @GET("asistencias/clase/{id}")
+    suspend fun getAsistenciasPorClase(@Path("id") cursoId: Int): Response<List<Asistencia>>
+
+    @GET("asistencias/{id}")
+    suspend fun getAsistenciaPorId(@Path("id") id: Int): Response<Asistencia>
 
     @POST("asistencias")
     suspend fun registrarAsistencia(@Body asistencia: Asistencia): Response<Map<String, String>>

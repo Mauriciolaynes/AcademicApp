@@ -28,7 +28,13 @@ public final class ActivityMarcarAsistenciaBinding implements ViewBinding {
   public final ImageButton btnBack;
 
   @NonNull
+  public final ImageButton btnCalendario;
+
+  @NonNull
   public final MaterialButton btnGuardarAsistencia;
+
+  @NonNull
+  public final LinearLayout layoutFecha;
 
   @NonNull
   public final LinearLayout layoutHeader;
@@ -46,21 +52,29 @@ public final class ActivityMarcarAsistenciaBinding implements ViewBinding {
   public final TextView tvDetalleClase;
 
   @NonNull
+  public final TextView tvFechaSeleccionada;
+
+  @NonNull
   public final TextView tvListaTitulo;
 
   private ActivityMarcarAsistenciaBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageButton btnBack, @NonNull MaterialButton btnGuardarAsistencia,
+      @NonNull ImageButton btnBack, @NonNull ImageButton btnCalendario,
+      @NonNull MaterialButton btnGuardarAsistencia, @NonNull LinearLayout layoutFecha,
       @NonNull LinearLayout layoutHeader, @NonNull ProgressBar progressAsistencia,
       @NonNull RecyclerView rvAlumnos, @NonNull TextView tvCursoNombre,
-      @NonNull TextView tvDetalleClase, @NonNull TextView tvListaTitulo) {
+      @NonNull TextView tvDetalleClase, @NonNull TextView tvFechaSeleccionada,
+      @NonNull TextView tvListaTitulo) {
     this.rootView = rootView;
     this.btnBack = btnBack;
+    this.btnCalendario = btnCalendario;
     this.btnGuardarAsistencia = btnGuardarAsistencia;
+    this.layoutFecha = layoutFecha;
     this.layoutHeader = layoutHeader;
     this.progressAsistencia = progressAsistencia;
     this.rvAlumnos = rvAlumnos;
     this.tvCursoNombre = tvCursoNombre;
     this.tvDetalleClase = tvDetalleClase;
+    this.tvFechaSeleccionada = tvFechaSeleccionada;
     this.tvListaTitulo = tvListaTitulo;
   }
 
@@ -97,9 +111,21 @@ public final class ActivityMarcarAsistenciaBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnCalendario;
+      ImageButton btnCalendario = ViewBindings.findChildViewById(rootView, id);
+      if (btnCalendario == null) {
+        break missingId;
+      }
+
       id = R.id.btnGuardarAsistencia;
       MaterialButton btnGuardarAsistencia = ViewBindings.findChildViewById(rootView, id);
       if (btnGuardarAsistencia == null) {
+        break missingId;
+      }
+
+      id = R.id.layoutFecha;
+      LinearLayout layoutFecha = ViewBindings.findChildViewById(rootView, id);
+      if (layoutFecha == null) {
         break missingId;
       }
 
@@ -133,6 +159,12 @@ public final class ActivityMarcarAsistenciaBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvFechaSeleccionada;
+      TextView tvFechaSeleccionada = ViewBindings.findChildViewById(rootView, id);
+      if (tvFechaSeleccionada == null) {
+        break missingId;
+      }
+
       id = R.id.tvListaTitulo;
       TextView tvListaTitulo = ViewBindings.findChildViewById(rootView, id);
       if (tvListaTitulo == null) {
@@ -140,8 +172,8 @@ public final class ActivityMarcarAsistenciaBinding implements ViewBinding {
       }
 
       return new ActivityMarcarAsistenciaBinding((ConstraintLayout) rootView, btnBack,
-          btnGuardarAsistencia, layoutHeader, progressAsistencia, rvAlumnos, tvCursoNombre,
-          tvDetalleClase, tvListaTitulo);
+          btnCalendario, btnGuardarAsistencia, layoutFecha, layoutHeader, progressAsistencia,
+          rvAlumnos, tvCursoNombre, tvDetalleClase, tvFechaSeleccionada, tvListaTitulo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

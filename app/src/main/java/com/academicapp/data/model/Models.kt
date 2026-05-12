@@ -43,7 +43,7 @@ data class Asistencia(
     var estado: EstadoAsistencia = EstadoAsistencia.SIN_MARCAR
 )
 
-enum class EstadoAsistencia { PRESENTE, AUSENTE, TARDANZA, SIN_MARCAR }
+enum class EstadoAsistencia { ASISTIO, FALTO, TARDE, SIN_MARCAR }
 
 data class Nota(
     val id: Int = 0,
@@ -78,6 +78,8 @@ data class Justificacion(
 data class JustificacionUpdateRequest(
     @SerializedName("id_justificacion")
     val idJustificacion: Int,
+    @SerializedName("id_asistencia")
+    val idAsistencia: Int,
     val estado: EstadoSolicitud,
     @SerializedName("respuesta_profesor")
     val respuestaProfesor: String
@@ -95,4 +97,4 @@ data class RevisionNota(
     val comentarioProfesor: String = ""
 )
 
-enum class EstadoSolicitud { PENDIENTE, APROBADA, RECHAZADA }
+enum class EstadoSolicitud { PENDIENTE, ACEPTADA, RECHAZADA, APROBADA }

@@ -30,22 +30,19 @@ class AlumnosAsistenciaAdapter(
             binding.tvAlumnoNombre.text = asistencia.alumnoNombre
 
             binding.rgAsistencia.setOnCheckedChangeListener(null)
-
-            binding.rgAsistencia.clearCheck()
-
+            
             when (asistencia.estado) {
-                EstadoAsistencia.PRESENTE -> binding.rbPresente.isChecked = true
-                EstadoAsistencia.TARDANZA -> binding.rbTardanza.isChecked = true
-                EstadoAsistencia.AUSENTE -> binding.rbFalta.isChecked = true
-                EstadoAsistencia.SIN_MARCAR -> {
-                }
+                EstadoAsistencia.ASISTIO -> binding.rgAsistencia.check(binding.rbPresente.id)
+                EstadoAsistencia.TARDE -> binding.rgAsistencia.check(binding.rbTardanza.id)
+                EstadoAsistencia.FALTO -> binding.rgAsistencia.check(binding.rbFalta.id)
+                EstadoAsistencia.SIN_MARCAR -> binding.rgAsistencia.clearCheck()
             }
 
             binding.rgAsistencia.setOnCheckedChangeListener { _, checkedId ->
                 val nuevoEstado = when (checkedId) {
-                    binding.rbPresente.id -> EstadoAsistencia.PRESENTE
-                    binding.rbTardanza.id -> EstadoAsistencia.TARDANZA
-                    binding.rbFalta.id -> EstadoAsistencia.AUSENTE
+                    binding.rbPresente.id -> EstadoAsistencia.ASISTIO
+                    binding.rbTardanza.id -> EstadoAsistencia.TARDE
+                    binding.rbFalta.id -> EstadoAsistencia.FALTO
                     else -> asistencia.estado
                 }
                 

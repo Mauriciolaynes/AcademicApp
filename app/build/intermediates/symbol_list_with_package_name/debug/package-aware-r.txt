@@ -3267,6 +3267,7 @@ id bounceStart
 id btnActualizarNotas
 id btnAprobar
 id btnBack
+id btnCalendario
 id btnDeleteNota
 id btnGuardarAsistencia
 id btnGuardarNotas
@@ -3422,6 +3423,7 @@ id jumpToStart
 id labeled
 id layout
 id layoutAcciones
+id layoutFecha
 id layoutHeader
 id left
 id leftToRight
@@ -3711,6 +3713,7 @@ id tvDetalleCurso
 id tvError
 id tvEstado
 id tvFecha
+id tvFechaSeleccionada
 id tvGradoCurso
 id tvIconoCurso
 id tvListaTitulo

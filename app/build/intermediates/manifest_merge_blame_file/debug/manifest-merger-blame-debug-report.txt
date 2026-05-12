@@ -9,11 +9,11 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:4:5-66
-11-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:4:22-64
+11-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:4:5-66
+11-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:4:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:5:5-78
-12-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:5:22-76
+12-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:5:5-78
+12-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:5:22-76
 13
 14    <permission
 14-->[androidx.core:core:1.12.0] C:\Users\mauri\.gradle\caches\transforms-3\88e34bdf4456fda3f546daabbcf3b977\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
@@ -27,83 +27,83 @@
 18-->[androidx.core:core:1.12.0] C:\Users\mauri\.gradle\caches\transforms-3\88e34bdf4456fda3f546daabbcf3b977\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
 19
 20    <application
-20-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:7:5-34:19
+20-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:7:5-34:19
 21        android:allowBackup="true"
-21-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:8:9-35
+21-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:8:9-35
 22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 22-->[androidx.core:core:1.12.0] C:\Users\mauri\.gradle\caches\transforms-3\88e34bdf4456fda3f546daabbcf3b977\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 23        android:debuggable="true"
 24        android:extractNativeLibs="true"
 25        android:icon="@mipmap/ic_launcher"
-25-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:9:9-43
+25-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:9:9-43
 26        android:label="@string/app_name"
-26-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:10:9-41
+26-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:10:9-41
 27        android:roundIcon="@mipmap/ic_launcher_round"
-27-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:11:9-54
+27-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:11:9-54
 28        android:supportsRtl="true"
-28-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:12:9-35
+28-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:12:9-35
 29        android:testOnly="true"
 30        android:theme="@style/Theme.AcademicApp"
-30-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:13:9-49
+30-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:13:9-49
 31        android:usesCleartextTraffic="true" >
-31-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:14:9-44
+31-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:14:9-44
 32
 33        <!-- LOGIN (Launcher) -->
 34        <activity
-34-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:17:9-24:20
+34-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:17:9-24:20
 35            android:name="com.academicapp.ui.login.LoginActivity"
-35-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:18:13-51
+35-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:18:13-51
 36            android:exported="true" >
-36-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:19:13-36
+36-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:19:13-36
 37            <intent-filter>
-37-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:20:13-23:29
+37-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:20:13-23:29
 38                <action android:name="android.intent.action.MAIN" />
-38-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:21:17-68
-38-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:21:25-66
+38-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:21:17-68
+38-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:21:25-66
 39
 40                <category android:name="android.intent.category.LAUNCHER" />
-40-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:22:17-76
-40-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:22:27-74
+40-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:22:17-76
+40-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:22:27-74
 41            </intent-filter>
 42        </activity>
 43
 44        <!-- PROFESOR -->
 45        <activity
-45-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:27:9-94
+45-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:27:9-94
 46            android:name="com.academicapp.ui.profesor.ProfesorHomeActivity"
-46-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:27:19-67
+46-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:27:19-67
 47            android:exported="false" />
-47-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:27:68-92
+47-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:27:68-92
 48        <activity
-48-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:28:9-109
+48-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:28:9-109
 49            android:name="com.academicapp.ui.profesor.asistencia.MarcarAsistenciaActivity"
-49-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:28:19-82
+49-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:28:19-82
 50            android:exported="false" />
-50-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:28:83-107
+50-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:28:83-107
 51        <activity
-51-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:9-101
+51-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:29:9-101
 52            android:name="com.academicapp.ui.profesor.notas.IngresarNotasActivity"
-52-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:19-74
+52-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:29:19-74
 53            android:exported="false" />
-53-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:29:75-99
+53-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:29:75-99
 54        <activity
-54-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:9-102
+54-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:30:9-102
 55            android:name="com.academicapp.ui.profesor.notas.ModificarNotasActivity"
-55-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:19-75
+55-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:30:19-75
 56            android:exported="false" />
-56-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:30:76-100
+56-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:30:76-100
 57        <activity
-57-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:9-104
+57-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:31:9-104
 58            android:name="com.academicapp.ui.profesor.notas.VerNotasProfesorActivity"
-58-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:19-77
+58-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:31:19-77
 59            android:exported="false" />
-59-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:31:78-102
+59-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:31:78-102
 60        <activity
-60-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:9-116
+60-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:32:9-116
 61            android:name="com.academicapp.ui.profesor.justificacion.GestionJustificacionActivity"
-61-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:19-89
+61-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:32:19-89
 62            android:exported="false" />
-62-->C:\Users\mauri\Downloads\AcademicApp_Android\AcademicApp\app\src\main\AndroidManifest.xml:32:90-114
+62-->C:\mb\AcademicApp\app\src\main\AndroidManifest.xml:32:90-114
 63
 64        <provider
 64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\mauri\.gradle\caches\transforms-3\ef3b5e46b966f5f2c1a4ff3684faae97\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20

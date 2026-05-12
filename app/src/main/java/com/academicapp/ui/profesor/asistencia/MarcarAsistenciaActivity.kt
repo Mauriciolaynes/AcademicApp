@@ -1,5 +1,6 @@
 package com.academicapp.ui.profesor.asistencia
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -14,12 +15,17 @@ import com.academicapp.network.RetrofitClient
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MarcarAsistenciaActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMarcarAsistenciaBinding
     private lateinit var alumnosAdapter: AlumnosAsistenciaAdapter
     private var cursoId: Int = -1
+    private val calendar = Calendar.getInstance()
+    private val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+    private var fechaSeleccionada: String = sdf.format(Date())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +45,7 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
         binding.btnBack.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
+        binding.tvFechaSeleccionada.text = "Fecha: $fechaSeleccionada"
     }
 
     private fun setupRecyclerView() {
@@ -53,6 +60,38 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
         binding.tvDetalleClase.text = "Sincronizando con servidor..."
     }
 
+    private fun setupListeners() {
+        binding.btnGuardarAsistencia.setOnClickListener {
+            guardarCambiosUnoPorUno()
+        }
+
+        binding.btnCalendario.setOnClickListener {
+            showDatePicker()
+        }
+
+        binding.layoutFecha.setOnClickListener {
+            showDatePicker()
+        }
+    }
+
+    private fun showDatePicker() {
+        val datePickerDialog = DatePickerDialog(
+            this,
+            { _, year, month, dayOfMonth ->
+                calendar.set(year, month, dayOfMonth)
+                fechaSeleccionada = sdf.format(calendar.time)
+                binding.tvFechaSeleccionada.text = "Fecha: $fechaSeleccionada"
+                cargarAlumnosYEstados()
+            },
+            calendar.get(Calendar.YEAR),
+            calendar.get(Calendar.MONTH),
+            calendar.get(Calendar.DAY_OF_MONTH)
+        )
+        // Restringir para que no se pueda seleccionar fechas futuras
+        datePickerDialog.datePicker.maxDate = System.currentTimeMillis()
+        datePickerDialog.show()
+    }
+
     private fun cargarAlumnosYEstados() {
         if (cursoId == -1) return
         
@@ -61,35 +100,43 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
             try {
+                // 1. Obtener lista de alumnos del curso
                 val resAlumnos = RetrofitClient.instance.getAlumnosPorCurso(cursoId)
                 
+                // 2. Obtener TODA la asistencia de este curso (nuevo endpoint optimizado)
+                val resAsistencias = RetrofitClient.instance.getAsistenciasPorClase(cursoId)
+
                 if (resAlumnos.isSuccessful && resAlumnos.body() != null) {
                     val alumnosApi = resAlumnos.body()!!
+                    val asistenciasApi = resAsistencias.body() ?: emptyList()
 
                     val listaFinal = alumnosApi.map { alumno ->
-                        async {
-                            val resAsis = RetrofitClient.instance.visualizarAsistencia(cursoId, alumno.id_usuario)
-                            
-                            val estadoCargado = if (resAsis.isSuccessful && resAsis.body() != null) {
-                                val body = resAsis.body()!!
-                                when {
-                                    body.observacion == "TARDANZA" -> EstadoAsistencia.TARDANZA
-                                    body.asistio -> EstadoAsistencia.PRESENTE
-                                    body.observacion == "AUSENTE" -> EstadoAsistencia.AUSENTE
-                                    else -> EstadoAsistencia.SIN_MARCAR
-                                }
-                            } else {
-                                EstadoAsistencia.SIN_MARCAR
-                            }
-
-                            Asistencia(
-                                alumnoId = alumno.id_usuario,
-                                alumnoNombre = alumno.nombre,
-                                cursoId = cursoId,
-                                estado = estadoCargado
-                            )
+                        // Buscamos si el alumno tiene asistencia registrada para la fecha seleccionada
+                        val asistenciaHoy = asistenciasApi.find { 
+                            it.id_alumno == alumno.id_usuario && it.fecha.startsWith(fechaSeleccionada) 
                         }
-                    }.awaitAll()
+                        
+                        val estadoCargado = if (asistenciaHoy != null) {
+                            val tipo = asistenciaHoy.tipo.uppercase().trim()
+                            when {
+                                tipo.contains("ASIST") || tipo == "P" || tipo.contains("PRESENTE") -> EstadoAsistencia.ASISTIO
+                                tipo.contains("FALT") || tipo == "F" || tipo.contains("FALTA") -> EstadoAsistencia.FALTO
+                                tipo.contains("TARD") || tipo == "T" || tipo.contains("TARDE") -> EstadoAsistencia.TARDE
+                                else -> EstadoAsistencia.SIN_MARCAR
+                            }
+                        } else {
+                            EstadoAsistencia.SIN_MARCAR
+                        }
+
+                        Asistencia(
+                            id = asistenciaHoy?.id_asistencia ?: 0, // Guardamos el ID real de la DB
+                            alumnoId = alumno.id_usuario,
+                            alumnoNombre = alumno.nombre,
+                            cursoId = cursoId,
+                            fecha = fechaSeleccionada,
+                            estado = estadoCargado
+                        )
+                    }
 
                     alumnosAdapter.submitList(listaFinal)
                     binding.tvDetalleClase.text = "${listaFinal.size} alumnos en lista"
@@ -100,12 +147,6 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
             } finally {
                 binding.progressAsistencia.visibility = View.GONE
             }
-        }
-    }
-
-    private fun setupListeners() {
-        binding.btnGuardarAsistencia.setOnClickListener {
-            guardarCambiosUnoPorUno()
         }
     }
 
@@ -125,21 +166,30 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
             try {
                 val resultados = listaAsistencia.map { item ->
                     async {
-                        val asisDTO = com.academicapp.network.model.Asistencia(
-                            id_clase = cursoId,
-                            id_alumno = item.alumnoId,
-                            asistio = item.estado == EstadoAsistencia.PRESENTE || item.estado == EstadoAsistencia.TARDANZA,
-                            observacion = item.estado.name
-                        )
-
-                        val resPost = RetrofitClient.instance.registrarAsistencia(asisDTO)
-                        
-                        if (resPost.isSuccessful && resPost.body()?.get("res") == "Error") {
-                            RetrofitClient.instance.editarAsistencia(asisDTO)
-                        } else if (!resPost.isSuccessful) {
+                        if (item.id > 0) {
+                            // Si ya tiene ID, es una actualización (PUT)
+                            val asisDTO = com.academicapp.network.model.Asistencia(
+                                id_asistencia = item.id,
+                                id_clase = item.cursoId,
+                                id_alumno = item.alumnoId,
+                                tipo = item.estado.name,
+                                observacion = "Actualizado: $fechaSeleccionada",
+                                fecha = fechaSeleccionada
+                            )
                             RetrofitClient.instance.editarAsistencia(asisDTO)
                         } else {
-                            resPost
+                            // Si no tiene ID, es un nuevo registro (POST)
+                            val asisDTO = com.academicapp.network.model.Asistencia(
+                                id_clase = item.cursoId,
+                                id_alumno = item.alumnoId,
+                                tipo = item.estado.name,
+                                observacion = "Nuevo Registro: $fechaSeleccionada",
+                                fecha = fechaSeleccionada
+                            )
+                            val res = RetrofitClient.instance.registrarAsistencia(asisDTO)
+                            // Retornamos un Response genérico para el conteo de errores
+                            if (res.isSuccessful) retrofit2.Response.success(Unit) 
+                            else retrofit2.Response.error(res.code(), res.errorBody()!!)
                         }
                     }
                 }.awaitAll()
@@ -154,6 +204,7 @@ class MarcarAsistenciaActivity : AppCompatActivity() {
                     finish()
                 } else {
                     Toast.makeText(context, "Se guardó con $errores errores", Toast.LENGTH_SHORT).show()
+                    cargarAlumnosYEstados()
                 }
 
             } catch (e: Exception) {

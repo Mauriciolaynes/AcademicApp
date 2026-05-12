@@ -40,7 +40,7 @@ class GestionJustificacionActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         adapter = JustificacionAdapter(
-            onAprobar = { justificacion -> actualizarEstado(justificacion, EstadoSolicitud.APROBADA) },
+            onAprobar = { justificacion -> actualizarEstado(justificacion, EstadoSolicitud.ACEPTADA) },
             onRechazar = { justificacion -> actualizarEstado(justificacion, EstadoSolicitud.RECHAZADA) }
         )
         binding.rvJustificaciones.layoutManager = LinearLayoutManager(this)
@@ -78,13 +78,17 @@ class GestionJustificacionActivity : AppCompatActivity() {
     private fun actualizarEstado(justificacion: Justificacion, nuevoEstado: EstadoSolicitud) {
         binding.progressJustificaciones.visibility = View.VISIBLE
         
-        val respuesta = if (nuevoEstado == EstadoSolicitud.APROBADA) 
-            "Se acepta la justificación. Recuerda presentar tus trabajos mañana." 
+        val sdf = java.text.SimpleDateFormat("dd/MM/yyyy", java.util.Locale.getDefault())
+        val hoy = sdf.format(java.util.Date())
+
+        val respuesta = if (nuevoEstado == EstadoSolicitud.ACEPTADA) 
+            "Justificación aceptada el $hoy. Asistencia actualizada." 
         else 
-            "Justificación rechazada. Comuníquese con coordinación."
+            "Justificación rechazada el $hoy. Comuníquese con coordinación."
 
         val request = JustificacionUpdateRequest(
             idJustificacion = justificacion.id,
+            idAsistencia = justificacion.asistenciaId,
             estado = nuevoEstado,
             respuestaProfesor = respuesta
         )
@@ -94,17 +98,52 @@ class GestionJustificacionActivity : AppCompatActivity() {
                 val response = RetrofitClient.instance.actualizarEstadoJustificacion(request)
                 
                 if (response.isSuccessful) {
-                    Toast.makeText(this@GestionJustificacionActivity, "Estado actualizado correctamente", Toast.LENGTH_SHORT).show()
+                    if (nuevoEstado == EstadoSolicitud.ACEPTADA) {
+                        // Si se aprueba, actualizamos la asistencia a ASISTIO
+                        // Usamos una función suspendida para esperar el resultado
+                        actualizarAsistenciaAprobadaSync(justificacion.asistenciaId)
+                    } else {
+                        Toast.makeText(this@GestionJustificacionActivity, "Justificación rechazada correctamente", Toast.LENGTH_SHORT).show()
+                    }
+                    // Refrescamos la lista en ambos casos exitosos
                     cargarJustificaciones()
                 } else {
-                    Toast.makeText(this@GestionJustificacionActivity, "Error al actualizar estado: ${response.code()}", Toast.LENGTH_SHORT).show()
+                    val errorMsg = "Error al actualizar: ${response.code()}"
+                    Toast.makeText(this@GestionJustificacionActivity, errorMsg, Toast.LENGTH_SHORT).show()
+                    Log.e("GestionJustificacion", "Error API: ${response.errorBody()?.string()}")
+                    cargarJustificaciones() // Recargar para restaurar estado de botones
                 }
             } catch (e: Exception) {
                 Log.e("GestionJustificacion", "Error al actualizar", e)
                 Toast.makeText(this@GestionJustificacionActivity, "Error de conexión", Toast.LENGTH_SHORT).show()
+                cargarJustificaciones()
             } finally {
                 binding.progressJustificaciones.visibility = View.GONE
             }
+        }
+    }
+
+    private suspend fun actualizarAsistenciaAprobadaSync(asistenciaId: Int) {
+        try {
+            // 1. Obtener los datos actuales de la asistencia
+            val resGet = RetrofitClient.instance.getAsistenciaPorId(asistenciaId)
+            if (resGet.isSuccessful && resGet.body() != null) {
+                val asistenciaActual = resGet.body()!!
+                
+                // 2. Modificar el tipo a ASISTIO (Justificado)
+                val asistenciaEditada = asistenciaActual.copy(
+                    tipo = "ASISTIO",
+                    observacion = "Justificado: ${asistenciaActual.observacion ?: ""}".trim()
+                )
+                
+                // 3. Enviar actualización
+                val resPut = RetrofitClient.instance.editarAsistencia(asistenciaEditada)
+                if (resPut.isSuccessful) {
+                    Log.d("GestionJustificacion", "Asistencia actualizada correctamente")
+                }
+            }
+        } catch (e: Exception) {
+            Log.e("GestionJustificacion", "Error al sincronizar asistencia", e)
         }
     }
 }

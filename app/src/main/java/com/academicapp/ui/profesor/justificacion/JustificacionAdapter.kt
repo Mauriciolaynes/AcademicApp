@@ -31,19 +31,35 @@ class JustificacionAdapter(
             binding.tvCursoNombre.text = item.cursoNombre
             binding.tvMotivo.text = item.motivo
 
-            if (item.estado == EstadoSolicitud.PENDIENTE) {
+            // Si el estado no es PENDIENTE, ocultamos botones y mostramos estado
+            val esFinalizado = item.estado != EstadoSolicitud.PENDIENTE
+            
+            if (!esFinalizado) {
                 binding.layoutAcciones.visibility = View.VISIBLE
                 binding.tvEstado.visibility = View.GONE
+                
+                binding.btnAprobar.isEnabled = true
+                binding.btnRechazar.isEnabled = true
             } else {
                 binding.layoutAcciones.visibility = View.GONE
                 binding.tvEstado.visibility = View.VISIBLE
                 binding.tvEstado.text = item.estado.name
-                val color = if (item.estado == EstadoSolicitud.APROBADA) "#4CAF50" else "#F44336"
+                
+                val esExitoso = item.estado == EstadoSolicitud.ACEPTADA || item.estado == EstadoSolicitud.APROBADA
+                val color = if (esExitoso) "#4CAF50" else "#F44336"
                 binding.tvEstado.setTextColor(android.graphics.Color.parseColor(color))
             }
 
-            binding.btnAprobar.setOnClickListener { onAprobar(item) }
-            binding.btnRechazar.setOnClickListener { onRechazar(item) }
+            binding.btnAprobar.setOnClickListener { 
+                binding.btnAprobar.isEnabled = false
+                binding.btnRechazar.isEnabled = false
+                onAprobar(item) 
+            }
+            binding.btnRechazar.setOnClickListener { 
+                binding.btnAprobar.isEnabled = false
+                binding.btnRechazar.isEnabled = false
+                onRechazar(item) 
+            }
         }
     }
 
