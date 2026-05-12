@@ -40,7 +40,7 @@ class GestionJustificacionActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         adapter = JustificacionAdapter(
-            onAprobar = { justificacion -> actualizarEstado(justificacion, EstadoSolicitud.ACEPTADA) },
+            onAprobar = { justificacion -> actualizarEstado(justificacion, EstadoSolicitud.APROBADA) },
             onRechazar = { justificacion -> actualizarEstado(justificacion, EstadoSolicitud.RECHAZADA) }
         )
         binding.rvJustificaciones.layoutManager = LinearLayoutManager(this)
@@ -81,8 +81,10 @@ class GestionJustificacionActivity : AppCompatActivity() {
         val sdf = java.text.SimpleDateFormat("dd/MM/yyyy", java.util.Locale.getDefault())
         val hoy = sdf.format(java.util.Date())
 
-        val respuesta = if (nuevoEstado == EstadoSolicitud.ACEPTADA) 
-            "Justificación aceptada el $hoy. Asistencia actualizada." 
+        val esAprobada = nuevoEstado == EstadoSolicitud.APROBADA || nuevoEstado == EstadoSolicitud.ACEPTADA
+        
+        val respuesta = if (esAprobada) 
+            "Justificación aprobada el $hoy. Asistencia actualizada." 
         else 
             "Justificación rechazada el $hoy. Comuníquese con coordinación."
 
@@ -98,9 +100,8 @@ class GestionJustificacionActivity : AppCompatActivity() {
                 val response = RetrofitClient.instance.actualizarEstadoJustificacion(request)
                 
                 if (response.isSuccessful) {
-                    if (nuevoEstado == EstadoSolicitud.ACEPTADA) {
+                    if (esAprobada) {
                         // Si se aprueba, actualizamos la asistencia a ASISTIO
-                        // Usamos una función suspendida para esperar el resultado
                         actualizarAsistenciaAprobadaSync(justificacion.asistenciaId)
                     } else {
                         Toast.makeText(this@GestionJustificacionActivity, "Justificación rechazada correctamente", Toast.LENGTH_SHORT).show()

@@ -43,9 +43,12 @@ class JustificacionAdapter(
             } else {
                 binding.layoutAcciones.visibility = View.GONE
                 binding.tvEstado.visibility = View.VISIBLE
-                binding.tvEstado.text = item.estado.name
                 
-                val esExitoso = item.estado == EstadoSolicitud.ACEPTADA || item.estado == EstadoSolicitud.APROBADA
+                // Normalizamos el texto mostrado
+                val estadoTexto = item.estado.name
+                binding.tvEstado.text = estadoTexto
+                
+                val esExitoso = item.estado == EstadoSolicitud.APROBADA || item.estado == EstadoSolicitud.ACEPTADA
                 val color = if (esExitoso) "#4CAF50" else "#F44336"
                 binding.tvEstado.setTextColor(android.graphics.Color.parseColor(color))
             }
